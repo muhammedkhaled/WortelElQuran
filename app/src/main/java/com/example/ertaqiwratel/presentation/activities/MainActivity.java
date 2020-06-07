@@ -1,8 +1,10 @@
-package com.example.ertaqiwratel;
+package com.example.ertaqiwratel.presentation.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.ertaqiwratel.R;
 
 public class MainActivity extends AppCompatActivity {
 
