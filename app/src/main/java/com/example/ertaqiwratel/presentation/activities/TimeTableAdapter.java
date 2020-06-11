@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -52,7 +53,8 @@ public class TimeTableAdapter extends RecyclerView.Adapter<TimeTableAdapter.Time
     public class TimeViewHolder extends RecyclerView.ViewHolder {
         TextView day, regularDate, higriDate, rateFarPast, rateNearPast, rateMetn, rateNewSave;
         ImageView check;
-        RelativeLayout topTitle, expandable;
+        RelativeLayout expandable;
+        LinearLayout topTitle;
 
         public TimeViewHolder(@NonNull View itemView) {
             super(itemView);
