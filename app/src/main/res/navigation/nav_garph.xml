@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_garph"
+    app:startDestination="@id/timeTableFragment">
+
+    <fragment
+        android:id="@+id/timeTableFragment"
+        android:name="com.example.ertaqiwratel.presentation.activities.destinations.TimeTableFragment"
+        android:label="fragment_time_table"
+        tools:layout="@layout/fragment_time_table" />
+    <fragment
+        android:id="@+id/myShiekFragment"
+        android:name="com.example.ertaqiwratel.presentation.activities.destinations.MyShiekFragment"
+        android:label="fragment_my_shiek"
+        tools:layout="@layout/fragment_my_shiek" />
+</navigation>
