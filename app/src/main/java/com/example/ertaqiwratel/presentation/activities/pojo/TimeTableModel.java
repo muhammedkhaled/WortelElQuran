@@ -96,17 +96,4 @@ public class TimeTableModel {
     public void setExpandable(boolean expandable) {
         isExpandable = expandable;
     }
-
-    @Override
-    public String toString() {
-        return "TimeTableModel{" +
-                "day='" + day + '\'' +
-                ", regularDate='" + regularDate + '\'' +
-                ", higriDate='" + higriDate + '\'' +
-                ", rateNewSave='" + rateNewSave + '\'' +
-                ", rateNearPast='" + rateNearPast + '\'' +
-                ", rateFarPast='" + rateFarPast + '\'' +
-                ", rateMetn='" + rateMetn + '\'' +
-                '}';
-    }
 }

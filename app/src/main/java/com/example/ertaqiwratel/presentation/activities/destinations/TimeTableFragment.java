@@ -6,13 +6,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.ertaqiwratel.R;
 import com.example.ertaqiwratel.databinding.FragmentTimeTableBinding;
 import com.example.ertaqiwratel.presentation.activities.TimeTableAdapter;
 import com.example.ertaqiwratel.presentation.activities.pojo.TimeTableModel;

@@ -13,7 +13,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.ertaqiwratel.R;
 import com.example.ertaqiwratel.presentation.activities.pojo.TimeTableModel;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class TimeTableAdapter extends RecyclerView.Adapter<TimeTableAdapter.TimeViewHolder> {
@@ -51,8 +50,7 @@ public class TimeTableAdapter extends RecyclerView.Adapter<TimeTableAdapter.Time
     }
 
     public class TimeViewHolder extends RecyclerView.ViewHolder {
-        TextView day, regularDate, higriDate, attendance, newSave, nearPast, farPast, metn,
-                rateFarPast, rateNearPast, rateMetn, rateNewSave;
+        TextView day, regularDate, higriDate, rateFarPast, rateNearPast, rateMetn, rateNewSave;
         ImageView check;
         RelativeLayout topTitle, expandable;
 
