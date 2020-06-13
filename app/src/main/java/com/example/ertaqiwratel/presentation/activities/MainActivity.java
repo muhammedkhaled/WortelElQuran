@@ -1,4 +1,4 @@
-package com.example.ertaqiwratel;
+package com.example.ertaqiwratel.presentation.activities;
 
 import android.os.Bundle;
 
@@ -7,6 +7,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 public class MainActivity extends AppCompatActivity implements NavigationHost {
+import com.example.ertaqiwratel.R;
+
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
