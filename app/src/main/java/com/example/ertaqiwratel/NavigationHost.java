@@ -2,6 +2,6 @@ package com.example.ertaqiwratel;
 
 import androidx.fragment.app.Fragment;
 
-interface NavigationHost {
+public interface NavigationHost {
     void navigateTo(Fragment fragment, boolean addToBackstack);
 }

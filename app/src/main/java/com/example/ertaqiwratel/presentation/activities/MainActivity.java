@@ -6,10 +6,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-public class MainActivity extends AppCompatActivity implements NavigationHost {
+import com.example.ertaqiwratel.NavigationHost;
+import com.example.ertaqiwratel.PhoneNumberFragment;
 import com.example.ertaqiwratel.R;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements NavigationHost {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
