@@ -24,4 +24,19 @@
         android:name="com.example.ertaqiwratel.presentation.activities.navUi.admin.AdminChatFragment"
         android:label="الاداره"
         tools:layout="@layout/fragment_chat" />
+    <fragment
+        android:id="@+id/myChiehkFrament"
+        android:name="com.example.ertaqiwratel.presentation.activities.MyChiehkFrament"
+        android:label="fragment_my_chiehk_frament"
+        tools:layout="@layout/fragment_my_chiehk_frament" >
+        <action
+            android:id="@+id/action_myChiehkFrament_to_myChiekhInfo"
+            app:destination="@id/myChiekhInfo"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/myChiekhInfo"
+        android:name="com.example.ertaqiwratel.presentation.activities.MyChiekhInfo"
+        android:label="fragment_my_chiekh_info"
+        tools:layout="@layout/fragment_my_chiekh_info" />
 </navigation>
