@@ -34,9 +34,6 @@ public class AdminChatFragment extends Fragment {
 
     private AdminChatViewModel adminChatViewModel;
 
-    public AdminChatFragment() {
-    }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

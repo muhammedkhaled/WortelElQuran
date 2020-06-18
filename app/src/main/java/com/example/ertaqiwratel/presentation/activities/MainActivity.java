@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_profile, R.id.nav_extra, R.id.nav_admin)
+                R.id.nav_home, R.id.nav_profile, R.id.nav_extra, R.id.nav_admin)
                 .setDrawerLayout(drawer)
                 .build();
         final NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
@@ -45,6 +45,9 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
 
                 switch (menuItem.getItemId()) {
+                    case R.id.nav_home:
+                        navController.navigate(R.id.nav_home);
+                        break;
                     case R.id.nav_profile:
                         navController.navigate(R.id.nav_profile);
                         break;
@@ -72,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.nafigation_drawer, menu);
+//        getMenuInflater().inflate(R.menu.nafigation_drawer, menu);
         return true;
     }
 
