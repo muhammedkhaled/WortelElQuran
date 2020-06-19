@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
                         navController.navigate(R.id.nav_extra);
                         break;
                     case R.id.nav_logout:
-                        navController.navigate(R.id.myChiehkFrament);
+
                         break;
                 }
 

@@ -6,17 +6,123 @@
     android:layout_height="match_parent"
     tools:context=".presentation.activities.navUi.profile.ProfileFragment">
 
-    <TextView
-        android:id="@+id/text_home"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/profile_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/change_profile_image_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/blue_rounded_corners"
+        android:drawableEnd="@drawable/ic_camera"
+        android:drawablePadding="10dp"
+        android:drawableTint="@android:color/white"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_image"
+        android:text="اضف صوره"
+        android:textColor="@android:color/white"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/profile_guide_line_v1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.88" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/profile_guide_line_v2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.12" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ti_profile_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/colorPrimary"
+        app:hintEnabled="true"
+        app:hintTextColor="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@+id/change_profile_image_btn"
+        app:layout_constraintStart_toStartOf="@id/profile_guide_line_v2"
+        app:layout_constraintEnd_toEndOf="@id/profile_guide_line_v1"
+        android:layout_marginTop="20dp"
+        >
+
+        <EditText
+            android:id="@+id/profile_name_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="الاسم"
+            android:inputType="textPersonName"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorPrimary"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ti_profile_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/colorPrimary"
+        app:hintEnabled="true"
+        app:hintTextColor="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@+id/ti_profile_name"
+        app:layout_constraintStart_toStartOf="@id/profile_guide_line_v2"
+        app:layout_constraintEnd_toEndOf="@id/profile_guide_line_v1"
+        android:layout_marginTop="20dp"
+        >
+
+        <EditText
+            android:id="@+id/profile_email_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="البريد الالكترونى"
+            android:inputType="textPersonName"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorPrimary"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ti_profile_phone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/colorPrimary"
+        app:hintEnabled="true"
+        app:hintTextColor="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@+id/ti_profile_email"
+        app:layout_constraintStart_toStartOf="@id/profile_guide_line_v2"
+        app:layout_constraintEnd_toEndOf="@id/profile_guide_line_v1"
+        android:layout_marginTop="20dp"
+        >
+
+        <EditText
+            android:id="@+id/profile_phone_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="رقم الهاتف"
+            android:inputType="textPersonName"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorPrimary"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
