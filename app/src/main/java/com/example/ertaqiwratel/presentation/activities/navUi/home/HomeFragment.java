@@ -38,8 +38,7 @@ public class HomeFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         view.findViewById(R.id.home_mychikh_btn)
-                .setOnClickListener(Navigation.
-                        createNavigateOnClickListener(R.id.myChiehkFrament, null));
+                .setOnClickListener(Navigation.createNavigateOnClickListener(R.id.myChiehkFrament, null));
 
 
     }

@@ -13,4 +13,7 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+    <string name="intro_text_1">يقال لصاحب القرأن يوم القيامه ارتقى ورتل فأن منزلتك عند اخر ايه تقراها</string>
+    <string name="intro_text_2">اعطاء اجازه متصله بالسند</string>
+    <string name="intro_text_3">"هل من مشمر الى الجنه "</string>
 </resources>
