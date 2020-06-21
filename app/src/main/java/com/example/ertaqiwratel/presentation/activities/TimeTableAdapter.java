@@ -3,6 +3,7 @@ package com.example.ertaqiwratel.presentation.activities;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -17,7 +18,7 @@ import com.example.ertaqiwratel.presentation.activities.pojo.TimeTableModel;
 import java.util.List;
 
 public class TimeTableAdapter extends RecyclerView.Adapter<TimeTableAdapter.TimeViewHolder> {
-    List<TimeTableModel> tableList;
+    final List<TimeTableModel> tableList;
 
     public TimeTableAdapter(List<TimeTableModel> tableList) {
         this.tableList = tableList;
@@ -39,9 +40,17 @@ public class TimeTableAdapter extends RecyclerView.Adapter<TimeTableAdapter.Time
         holder.rateFarPast.setText(tableModel.getRateFarPast());
         holder.rateMetn.setText(tableModel.getRateMetn());
         holder.rateNewSave.setText(tableModel.getRateNewSave());
+//        holder.ivEdit.setVisibility(View.GONE);
 
         boolean isExpandable = tableModel.isExpandable();
-        holder.expandable.setVisibility(isExpandable ? View.VISIBLE : View.GONE);
+        //holder.expandable.setVisibility(isExpandable ? View.VISIBLE : View.GONE);
+        if (isExpandable) {
+            holder.expandable.setVisibility(View.VISIBLE);
+            holder.ivExpandable.setImageResource(R.drawable.up_arrow);
+        } else {
+            holder.expandable.setVisibility(View.GONE);
+            holder.ivExpandable.setImageResource(R.drawable.down_arrow);
+        }
 
     }
 
@@ -51,10 +60,18 @@ public class TimeTableAdapter extends RecyclerView.Adapter<TimeTableAdapter.Time
     }
 
     public class TimeViewHolder extends RecyclerView.ViewHolder {
-        TextView day, regularDate, higriDate, rateFarPast, rateNearPast, rateMetn, rateNewSave;
-        ImageView check;
-        RelativeLayout expandable;
-        LinearLayout topTitle;
+        final TextView day;
+        final TextView regularDate;
+        final TextView higriDate;
+        final TextView rateFarPast;
+        final TextView rateNearPast;
+        final TextView rateMetn;
+        final TextView rateNewSave;
+        final CheckBox check;
+        final RelativeLayout expandable;
+        final LinearLayout topTitle;
+        final ImageView ivExpandable;
+        final ImageView ivEdit;
 
         public TimeViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -65,9 +82,12 @@ public class TimeTableAdapter extends RecyclerView.Adapter<TimeTableAdapter.Time
             rateFarPast = itemView.findViewById(R.id.tv_rate_far_past);
             rateMetn = itemView.findViewById(R.id.tv_rate_metn);
             rateNearPast = itemView.findViewById(R.id.tv_rate_near_past);
-            check = itemView.findViewById(R.id.iv_check);
+            check = itemView.findViewById(R.id.check_box);
             topTitle = itemView.findViewById(R.id.top_title);
             expandable = itemView.findViewById(R.id.expandable);
+            ivExpandable = itemView.findViewById(R.id.iv_arrow_expand);
+            ivEdit = itemView.findViewById(R.id.iv_edit);
+
 
             topTitle.setOnClickListener(new View.OnClickListener() {
                 @Override

@@ -3,8 +3,12 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
-    <color name="cyan">#54A9B7</color>
+    <color name="cyan">#9FD5E9</color>
+    <color name="darkCyan">#2CA8BC</color>
     <color name="lightCyan">#D3EBEF</color>
+    <color name="black">#000000</color>
     <color name="yellow">#F2FF37</color>
+    <color name="green">#32CD32</color>
+    <color name="lightBlue">#66BAE7</color>
 
 </resources>

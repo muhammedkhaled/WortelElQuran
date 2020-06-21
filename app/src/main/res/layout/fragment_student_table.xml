@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.activities.destinations.TimeTableFragment">
+    tools:context=".presentation.activities.destinations.StudentTableFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_time_table"
@@ -16,14 +16,18 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:listitem="@layout/table_item1" />
 
-    <Button
-        android:id="@+id/btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="test fargment"
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add_new_table"
+        style="@style/Widget.MaterialComponents.FloatingActionButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="25dp"
+        android:backgroundTint="@color/cyan"
+        android:src="@drawable/add"
+        app:borderWidth="0dp"
+        app:fabCustomSize="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/rv_time_table" />
+        app:maxImageSize="30dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

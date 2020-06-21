@@ -13,35 +13,40 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.ertaqiwratel.R;
-import com.example.ertaqiwratel.databinding.FragmentTimeTableBinding;
+import com.example.ertaqiwratel.databinding.FragmentStudentTableBinding;
 import com.example.ertaqiwratel.presentation.activities.TimeTableAdapter;
 import com.example.ertaqiwratel.presentation.activities.pojo.TimeTableModel;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class TimeTableFragment extends Fragment {
-    List<TimeTableModel> modelList;
-    private FragmentTimeTableBinding binding;
+public class StudentTableFragment extends Fragment {
+
+    private FragmentStudentTableBinding binding;
+    private List<TimeTableModel> modelList;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        binding = FragmentTimeTableBinding.inflate(inflater, container, false);
+        binding = FragmentStudentTableBinding.inflate(inflater, container, false);
         View view = binding.getRoot();
         return view;
     }
 
     @Override
-    public void onViewCreated(@NonNull final View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         initData();
         setRecyclerView();
-        binding.btn.setOnClickListener(new View.OnClickListener() {
+        addNewItem(view);
+    }
+
+    private void addNewItem(final View view) {
+        binding.fabAddNewTable.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Navigation.findNavController(view).navigate(R.id.action_timeTableFragment_to_splashFragment);
+                Navigation.findNavController(view).navigate(R.id.action_studentFragment_to_addNewTableForStudentFragment);
             }
         });
     }
@@ -70,5 +75,4 @@ public class TimeTableFragment extends Fragment {
                 , "10/7", "10/10", "10/5"));
 
     }
-
 }

@@ -3,5 +3,6 @@
     <dimen name="large">24sp</dimen>
     <dimen name="mid">20sp</dimen>
     <dimen name="small">18sp</dimen>
+    <dimen name="vsmall">16sp</dimen>
 
 </resources>
