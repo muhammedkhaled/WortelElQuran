@@ -88,7 +88,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="18dp"
                 android:layout_marginEnd="28dp"
-                android:text="الجوال"
+                android:text="@string/phone"
                 android:textColor="@android:color/black"
                 android:textSize="18sp"
                 android:textStyle="bold"
@@ -113,7 +113,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="18dp"
                 android:layout_marginEnd="28dp"
-                android:text="الحاله"
+                android:text="@string/status"
                 android:textColor="@android:color/black"
                 android:textSize="18sp"
                 android:textStyle="bold"
@@ -140,7 +140,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
-                android:text="الاحازات المتصله بالسند"
+                android:text="@string/quran_ijazah"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="18sp"
                 android:textStyle="bold"
@@ -159,172 +159,6 @@
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/my_chikh_igaza" />
-
-            <TextView
-                android:id="@+id/my_chikh_schedule"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="18dp"
-                android:text="مواعيد الشيخ"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/my_chikh_info_tv_igazaIO" />
-
-            <RelativeLayout
-                android:id="@+id/relative1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="18dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="18dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/my_chikh_schedule">
-
-                <TextView
-                    android:id="@+id/my_chiekh_info_tv_to"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:text="الى"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginStart="32dp"/>
-
-                <TextView
-                    android:id="@+id/my_chiekh_info_tv_from"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:text="من"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:layout_centerInParent="true"/>
-
-                <TextView
-                    android:id="@+id/my_chiekh_info_tv_days"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:text="اﻷيام"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="32dp"/>
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/my_chiekh_info_relative_sat"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="18dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="18dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/relative1">
-
-                <TextView
-                    android:id="@+id/my_chiekh_info_tv_sat_to"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/white_rounded_red"
-                    android:gravity="center_horizontal"
-                    android:text="9 م"
-                    android:textSize="14sp"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginStart="32dp"
-                    android:paddingStart="10dp"
-                    android:paddingEnd="10dp"
-                    android:paddingTop="2dp"
-                    android:paddingBottom="2dp"/>
-
-                <TextView
-                    android:id="@+id/my_chiekh_info_tv_sat_from"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/white_rounded_green"
-                    android:gravity="center_horizontal"
-                    android:text="4 م"
-                    android:textSize="14sp"
-                    android:layout_centerInParent="true"
-                    android:paddingStart="10dp"
-                    android:paddingEnd="10dp"
-                    android:paddingTop="2dp"
-                    android:paddingBottom="2dp"/>
-
-                <TextView
-                    android:id="@+id/my_chiekh_info_tv_sat"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:text="السبت"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="32dp"
-                    />
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/my_chiekh_info_relative_sun"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="18dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="18dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/my_chiekh_info_relative_sat">
-
-                <TextView
-                    android:id="@+id/my_chiekh_info_tv_sun_to"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/white_rounded_red"
-                    android:gravity="center_horizontal"
-                    android:text="9 م"
-                    android:textSize="14sp"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginStart="32dp"
-                    android:paddingStart="10dp"
-                    android:paddingEnd="10dp"
-                    android:paddingTop="2dp"
-                    android:paddingBottom="2dp"/>
-
-                <TextView
-                    android:id="@+id/my_chiekh_info_tv_sun_from"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/white_rounded_green"
-                    android:gravity="center_horizontal"
-                    android:text="4 م"
-                    android:textSize="14sp"
-                    android:layout_centerInParent="true"
-                    android:paddingStart="10dp"
-                    android:paddingEnd="10dp"
-                    android:paddingTop="2dp"
-                    android:paddingBottom="2dp"/>
-
-                <TextView
-                    android:id="@+id/my_chiekh_info_tv_sun"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:text="الاحد"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="32dp"
-                    />
-
-            </RelativeLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

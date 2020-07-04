@@ -38,7 +38,7 @@ public class SplashFragment extends Fragment {
             }
         },1000);
 
-        // wait 3 seconds to do this {
+        // wait 3 seconds to do this
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -52,8 +52,5 @@ public class SplashFragment extends Fragment {
                 }
             }
         },3000);
-        // }
-
-
     }
 }

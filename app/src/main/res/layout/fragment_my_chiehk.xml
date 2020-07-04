@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".presentation.activities.MyChiehkFrament">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/my_chiekh_app_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        
+
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/my_chiekh_toolbar"
             android:layout_width="match_parent"
@@ -18,22 +18,19 @@
             android:background="?attr/colorPrimary"
             android:minHeight="?attr/actionBarSize">
 
-
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                >
+                android:layout_height="match_parent">
 
                 <ImageView
                     android:id="@+id/back_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_arrow_forward"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
                     android:layout_marginEnd="10dp"
-                    />
+                    android:src="@drawable/ic_arrow_forward"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/chat_user_profile_image"
@@ -41,52 +38,50 @@
                     android:layout_height="40dp"
                     android:layout_marginEnd="8dp"
                     android:src="@drawable/profile_image"
-                    app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/back_btn"/>
+                    app:layout_constraintEnd_toStartOf="@+id/back_btn"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/mychiekh_name"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="18dp"
+                    android:gravity="center_vertical"
                     android:text="احمد سامح"
+                    android:textColor="@android:color/black"
                     android:textSize="16sp"
                     android:textStyle="bold"
-                    android:gravity="center_vertical"
-                    android:layout_alignParentTop="true"
-                    app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/chat_user_profile_image"
-                    android:layout_marginEnd="18dp"
-                    android:textColor="@android:color/black"/>
+                    app:layout_constraintTop_toTopOf="parent" />
 
 
                 <ImageView
                     android:id="@+id/mychiekh_audio_call"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
                     android:src="@drawable/ic_audio_call"
-                    app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@id/mychiekh_video_call"
-                    android:layout_marginStart="10dp"
-                    />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
                     android:id="@+id/mychiekh_video_call"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
                     android:src="@drawable/ic_video_call"
-                    app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    android:layout_marginStart="10dp"
-                    />
+                    app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.appcompat.widget.Toolbar>
-        
+
     </com.google.android.material.appbar.AppBarLayout>
 
     <LinearLayout
@@ -115,7 +110,7 @@
             android:layout_width="137dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:hint="اكتب رساله"
+            android:hint="@string/write_message"
             android:maxHeight="300dp"
             android:paddingStart="5dp"
             android:paddingEnd="5dp"
@@ -139,7 +134,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/linearLayout"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/my_chiekh_app_bar" />
+        android:layout_below="@+id/my_chiekh_app_bar"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

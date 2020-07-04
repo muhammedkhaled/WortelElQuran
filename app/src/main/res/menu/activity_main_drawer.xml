@@ -7,27 +7,27 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_home"
-            android:iconTint="@android:color/black"
-            android:title="الصفحه الرئيسيه" />
+            android:iconTint="@color/black"
+            android:title="@string/home_screen" />
         <item
             android:id="@+id/nav_profile"
             android:icon="@drawable/ic_profile"
-            android:iconTint="@android:color/black"
-            android:title="الصفحه الشخصيه" />
+            android:iconTint="@color/black"
+            android:title="@string/profile" />
         <item
             android:id="@+id/nav_admin"
             android:icon="@drawable/ic_chat"
-            android:iconTint="@android:color/black"
-            android:title="الاداره" />
+            android:iconTint="@color/black"
+            android:title="@string/administration" />
         <item
             android:id="@+id/nav_extra"
             android:icon="@drawable/ic_plus"
-            android:iconTint="@android:color/black"
-            android:title="تسميع اضافى" />
+            android:iconTint="@color/black"
+            android:title="@string/extra_session" />
         <item
             android:id="@+id/nav_logout"
             android:icon="@drawable/ic_logout"
-            android:iconTint="#DF1B1B"
-            android:title="تسجيل الخروج" />
+            android:iconTint="@color/red"
+            android:title="@string/logout" />
     </group>
 </menu>

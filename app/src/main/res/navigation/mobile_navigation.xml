@@ -29,7 +29,7 @@
         android:id="@+id/myChiehkFrament"
         android:name="com.example.ertaqiwratel.presentation.activities.MyChiehkFrament"
         android:label="fragment_my_chiehk_frament"
-        tools:layout="@layout/fragment_my_chiehk_frament">
+        tools:layout="@layout/fragment_my_chiehk">
         <action
             android:id="@+id/action_myChiehkFrament_to_myChiekhInfo"
             app:destination="@id/myChiekhInfo"

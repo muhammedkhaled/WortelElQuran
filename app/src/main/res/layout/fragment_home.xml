@@ -22,14 +22,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/andalus"
-        android:text="ًصاحب القراءن"
+        android:text="@string/app_name"
         android:textColor="@android:color/black"
         android:textSize="28sp"
         app:layout_constraintBottom_toTopOf="@+id/greeting_ll"
         app:layout_constraintEnd_toEndOf="@+id/home_logo"
         app:layout_constraintStart_toStartOf="@+id/home_logo"
-        app:layout_constraintTop_toBottomOf="@+id/home_logo"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/home_logo" />
 
     <LinearLayout
         android:id="@+id/greeting_ll"
@@ -48,7 +47,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="10dp"
             android:fontFamily="@font/segoe_ui_bold"
-            android:text="مرحبا"
+            android:text="@string/welcome"
             android:textColor="@android:color/black"
             android:textSize="18sp" />
 
@@ -62,7 +61,6 @@
             android:textSize="20sp" />
 
     </LinearLayout>
-
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/home_rl"
@@ -195,7 +193,6 @@
 
 
         </com.balysv.materialripple.MaterialRippleLayout>
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

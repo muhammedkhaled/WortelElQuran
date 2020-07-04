@@ -29,10 +29,6 @@ public class OnBoardingFragment extends Fragment {
 
     private int position;
 
-    public OnBoardingFragment() {
-        // Required empty public constructor
-    }
-
     public static OnBoardingFragment newInstance(int position) {
         OnBoardingFragment fragment = new OnBoardingFragment();
         Bundle args = new Bundle();
@@ -52,7 +48,6 @@ public class OnBoardingFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_on_boarding, container, false);
     }
 
@@ -64,8 +59,7 @@ public class OnBoardingFragment extends Fragment {
         TextView title = view.findViewById(R.id.intro_headline);
         TextView text = view.findViewById(R.id.intro_text);
 
-
-        title.setText("صاحب القرأن");
+        title.setText(R.string.app_name);
         text.setText(PAGE_TEXT[position]);
         introImg.setImageResource(PAGE_IMAGE[position]);
     }

@@ -62,7 +62,7 @@
             android:paddingTop="15dp"
             android:paddingEnd="20dp"
             android:paddingBottom="15dp"
-            android:text="رتل معنا الان"
+            android:text="@string/start_tartel_now"
             android:textColor="@android:color/white"
             android:textSize="20sp"
             android:visibility="gone"
