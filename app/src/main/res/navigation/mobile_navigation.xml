@@ -8,27 +8,26 @@
     <fragment
         android:id="@+id/nav_home"
         android:name="com.example.ertaqiwratel.presentation.activities.navUi.home.HomeFragment"
-        android:label="الصفحه الرئيسيه"
+        android:label="@string/home_screen"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/nav_profile"
         android:name="com.example.ertaqiwratel.presentation.activities.navUi.profile.ProfileFragment"
-        android:label="الصفحه الشخصيه"
-        tools:layout="@layout/fragmnet_profile"></fragment>
+        android:label="@string/profile"
+        tools:layout="@layout/fragmnet_profile" />
     <fragment
         android:id="@+id/nav_extra"
         android:name="com.example.ertaqiwratel.presentation.activities.navUi.extra.ExtraSessionFragment"
-        android:label="تسميع اضافى"
+        android:label="@string/extra_session"
         tools:layout="@layout/fragment_extra_session" />
     <fragment
         android:id="@+id/nav_admin"
         android:name="com.example.ertaqiwratel.presentation.activities.navUi.admin.AdminChatFragment"
-        android:label="الاداره"
+        android:label="@string/administration"
         tools:layout="@layout/fragment_chat" />
     <fragment
         android:id="@+id/myChiehkFrament"
         android:name="com.example.ertaqiwratel.presentation.activities.MyChiehkFrament"
-        android:label="fragment_my_chiehk_frament"
         tools:layout="@layout/fragment_my_chiehk">
         <action
             android:id="@+id/action_myChiehkFrament_to_myChiekhInfo"
@@ -38,6 +37,5 @@
     <fragment
         android:id="@+id/myChiekhInfo"
         android:name="com.example.ertaqiwratel.presentation.activities.MyChiekhInfo"
-        android:label="fragment_my_chiekh_info"
         tools:layout="@layout/fragment_my_chiekh_info" />
 </navigation>

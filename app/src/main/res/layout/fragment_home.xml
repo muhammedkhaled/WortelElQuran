@@ -7,7 +7,7 @@
     tools:context=".presentation.activities.navUi.home.HomeFragment">
 
     <ImageView
-        android:id="@+id/home_logo"
+        android:id="@+id/home_app_logo_imgView"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="20dp"
@@ -26,9 +26,9 @@
         android:textColor="@android:color/black"
         android:textSize="28sp"
         app:layout_constraintBottom_toTopOf="@+id/greeting_ll"
-        app:layout_constraintEnd_toEndOf="@+id/home_logo"
-        app:layout_constraintStart_toStartOf="@+id/home_logo"
-        app:layout_constraintTop_toBottomOf="@+id/home_logo" />
+        app:layout_constraintEnd_toEndOf="@+id/home_app_logo_imgView"
+        app:layout_constraintStart_toStartOf="@+id/home_app_logo_imgView"
+        app:layout_constraintTop_toBottomOf="@+id/home_app_logo_imgView" />
 
     <LinearLayout
         android:id="@+id/greeting_ll"

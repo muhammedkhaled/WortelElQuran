@@ -17,9 +17,6 @@ import com.example.ertaqiwratel.R;
 
 public class OnBoardingFragment extends Fragment {
     private static final String ARG_POSITION = "slider-position";
-    /*@StringRes
-    private static final int[] PAGE_TITLES =
-            new int[] { R.string.intro_headline_1, R.string.intro_headline_2};*/
     @StringRes
     private static final int[] PAGE_TEXT =
             new int[] { R.string.intro_text_1, R.string.intro_text_2, R.string.intro_text_3};
