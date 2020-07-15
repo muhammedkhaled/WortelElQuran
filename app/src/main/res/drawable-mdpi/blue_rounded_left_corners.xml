@@ -2,7 +2,6 @@
 <shape android:autoMirrored="true" xmlns:android="http://schemas.android.com/apk/res/android">
     <solid android:color="#66BAE7" />
     <corners
-        android:topLeftRadius="40dp"
-        android:bottomLeftRadius="40dp"
+        android:radius="2dp"
         />
 </shape>

@@ -116,19 +116,18 @@
             android:textColor="@android:color/black"
             android:textSize="18sp" />
 
-
         <TextView
             android:id="@+id/my_chiekh_info_tv_statusIO"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
             android:layout_marginTop="8dp"
-            android:drawableEnd="@drawable/online_circle"
-            android:drawablePadding="5dp"
+            android:drawableStart="@drawable/online_circle"
+            android:drawablePadding="4dp"
             android:text="متاح الان"
             android:textColor="@color/green"
             android:textSize="18sp"
-            android:textStyle="bold" />
+            />
 
     </LinearLayout>
 
