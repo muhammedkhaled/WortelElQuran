@@ -3,5 +3,5 @@
     android:autoMirrored="true">
     <solid android:color="#FFFFFF" />
     <corners
-        android:radius="20dp" />
+        android:radius="15dp" />
 </shape>

@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -13,6 +14,8 @@ import android.widget.TextView;
 
 import com.example.ertaqiwratel.R;
 import com.google.android.material.tabs.TabLayout;
+
+import java.util.Locale;
 
 public class LandingActivity extends AppCompatActivity {
 
@@ -27,6 +30,10 @@ public class LandingActivity extends AppCompatActivity {
         ConstraintLayout introView = findViewById(R.id.intro_view);
         starterView.setVisibility(View.GONE);
         introView.setVisibility(View.VISIBLE);
+
+        // make default direction RTL
+        Configuration config = LandingActivity.this.getResources().getConfiguration();
+        config.setLayoutDirection(new Locale("ar"));
 
         ViewPager viewPager = findViewById(R.id.pagerIntroSlider);
         TabLayout tabLayout = findViewById(R.id.tabs);

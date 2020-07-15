@@ -12,34 +12,22 @@ import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import com.example.ertaqiwratel.R;
 
 public class HomeFragment extends Fragment {
 
-    private HomeViewModel mViewModel;
-
-
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_home, container, false);
-    }
-
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        mViewModel = ViewModelProviders.of(this).get(HomeViewModel.class);
-        // TODO: Use the ViewModel
+        return inflater.inflate(R.layout.fragment_student_home, container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        view.findViewById(R.id.home_mychikh_btn)
+
+        view.findViewById(R.id.home_myshiekh_mrl)
                 .setOnClickListener(Navigation.createNavigateOnClickListener(R.id.myChiehkFrament, null));
-
-
     }
 }

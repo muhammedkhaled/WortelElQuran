@@ -13,9 +13,9 @@
     <string name="intro_text_2">اعطاء اجازه متصله بالسند</string>
     <string name="intro_text_3">"هل من مشمر الى الجنه "</string>
     <string name="write_message">اكتب رساله</string>
-    <string name="phone">الجوال</string>
-    <string name="status">الحاله</string>
-    <string name="quran_ijazah">الاحازات المتصله بالسند</string>
+    <string name="chiehk_phone">الجوال</string>
+    <string name="chiehk_status">الحاله</string>
+    <string name="quran_ijazah">الاجازات المتصله بالسند</string>
     <string name="home_screen">الصفحه الرئيسيه</string>
     <string name="profile">الصفحه الشخصيه</string>
     <string name="administration">الاداره</string>
@@ -23,4 +23,11 @@
     <string name="logout">تسجيل الخروج</string>
     <string name="start_tartel_now">رتل القرأن معنا</string>
     <string name="welcome">مرحبا</string>
+    <string name="elchiekh">الشيخ</string>
+    <string name="schedule">الجدول</string>
+    <string name="class_room">الفرقه</string>
+    <string name="settings">اﻷعدادات</string>
+    <string name="chiekh_name">اﻷسم</string>
+    <string name="video_call">video_call</string>
+    <string name="audio_call">audio_call</string>
 </resources>

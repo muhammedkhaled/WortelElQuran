@@ -9,7 +9,11 @@
         android:id="@+id/nav_home"
         android:name="com.example.ertaqiwratel.presentation.activities.navUi.home.HomeFragment"
         android:label="@string/home_screen"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_student_home" >
+        <action
+            android:id="@+id/action_nav_home_to_myChiehkFrament"
+            app:destination="@id/myChiehkFrament" />
+    </fragment>
     <fragment
         android:id="@+id/nav_profile"
         android:name="com.example.ertaqiwratel.presentation.activities.navUi.profile.ProfileFragment"
@@ -27,15 +31,24 @@
         tools:layout="@layout/fragment_chat" />
     <fragment
         android:id="@+id/myChiehkFrament"
-        android:name="com.example.ertaqiwratel.presentation.activities.MyChiehkFrament"
-        tools:layout="@layout/fragment_my_chiehk">
+        android:label=""
+        android:name="com.example.ertaqiwratel.presentation.activities.MyChiehkFragment"
+        tools:layout="@layout/fragment_my_chiehk"
+        >
         <action
             android:id="@+id/action_myChiehkFrament_to_myChiekhInfo"
-            app:destination="@id/myChiekhInfo"
+            app:destination="@id/chiehk_info_dialog"
             app:popUpToInclusive="true" />
+
     </fragment>
-    <fragment
+<!--    <fragment
         android:id="@+id/myChiekhInfo"
-        android:name="com.example.ertaqiwratel.presentation.activities.MyChiekhInfo"
-        tools:layout="@layout/fragment_my_chiekh_info" />
+        android:name="com.example.ertaqiwratel.presentation.activities.ChiekhInfoDialog"
+        tools:layout="@layout/dialog_chiekh_info" />-->
+
+    <dialog
+        android:id="@+id/chiehk_info_dialog"
+        android:name="com.example.ertaqiwratel.presentation.activities.ChiekhInfoDialog"
+        tools:layout="@layout/dialog_chiekh_info" />
+
 </navigation>
