@@ -42,7 +42,7 @@ public class SplashFragment extends Fragment {
 
     private void setAnimations() {
         Animation animation = AnimationUtils.loadAnimation(getActivity(), R.anim.fad_in);
-        binding.tvTitle.setAnimation(animation);
+        binding.splashAppName.setAnimation(animation);
 
     }
 

@@ -7,7 +7,7 @@
     tools:context=".presentation.activities.destinations.SplashFragment">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/splash_logo"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:padding="5dp"
@@ -19,19 +19,20 @@
         app:layout_constraintVertical_bias="0.3" />
 
     <TextView
-        android:id="@+id/tv_title"
+        android:id="@+id/splash_app_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/andalus"
         android:gravity="center"
-        android:shadowColor="@color/darkCyan"
+        android:shadowColor="@color/colorPrimaryDark"
         android:shadowRadius="2"
         android:text="@string/ratel"
         android:textColor="@color/black"
         android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/splash_logo" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">ErtaqiWRatel</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="app_name">ورتل القرأن</string>
+
     <string name="saturday">السبت</string>
     <string name="regular_date">15 مايو</string>
     <string name="higri_date">5 شوال</string>
@@ -11,8 +11,7 @@
     <string name="far_past">ماضي بعيد</string>
     <string name="metn">المتن</string>
     <string name="check">check</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
     <string name="year">2020</string>
     <string name="slash">/</string>
     <string name="save">حفظ</string>
