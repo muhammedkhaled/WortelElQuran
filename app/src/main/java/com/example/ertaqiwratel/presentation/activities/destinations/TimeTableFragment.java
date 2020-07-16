@@ -29,8 +29,7 @@ public class TimeTableFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         binding = FragmentTimeTableBinding.inflate(inflater, container, false);
-        View view = binding.getRoot();
-        return view;
+        return binding.getRoot();
     }
 
     @Override
@@ -38,12 +37,7 @@ public class TimeTableFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         initData();
         setRecyclerView();
-        binding.btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Navigation.findNavController(view).navigate(R.id.action_timeTableFragment_to_splashFragment);
-            }
-        });
+
     }
 
     private void setRecyclerView() {

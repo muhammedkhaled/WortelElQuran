@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/myshiekh_video_call"
+        android:icon="@drawable/ic_video_call"
+        android:title="@string/video_call"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/myshiekh_audio_call"
+        android:icon="@drawable/ic_audio_call"
+        android:title="@string/audio_call"
+        app:showAsAction="always"/>
+
+</menu>

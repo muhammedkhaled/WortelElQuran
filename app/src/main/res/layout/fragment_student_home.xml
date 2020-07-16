@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.activities.navUi.home.HomeFragment">
+
+    <ImageView
+        android:id="@+id/home_app_logo_imgView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/logo_blue"
+        app:layout_constraintBottom_toTopOf="@+id/home_app_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/home_app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/andalus"
+        android:text="@string/app_name"
+        android:textColor="@android:color/black"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@+id/greeting_ll"
+        app:layout_constraintEnd_toEndOf="@+id/home_app_logo_imgView"
+        app:layout_constraintStart_toStartOf="@+id/home_app_logo_imgView"
+        app:layout_constraintTop_toBottomOf="@+id/home_app_logo_imgView" />
+
+    <LinearLayout
+        android:id="@+id/greeting_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/home_consL"
+        app:layout_constraintEnd_toEndOf="@+id/home_app_name"
+        app:layout_constraintStart_toStartOf="@+id/home_app_name"
+        app:layout_constraintTop_toBottomOf="@+id/home_app_name">
+
+        <TextView
+            android:id="@+id/greeting_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/segoe_ui_bold"
+            android:text="@string/welcome"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/home_student_name_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/segoe_ui_bold"
+            android:text="بالطالبه: آلاء علي"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/home_consL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/greeting_ll"
+        app:layout_constraintStart_toStartOf="@+id/greeting_ll"
+        app:layout_constraintTop_toBottomOf="@+id/greeting_ll">
+
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/home_myshiekh_mrl"
+            style="@style/RippleStyleWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/mrl_3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/home_schedule_mrl"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="112dp"
+                android:layout_height="124dp"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.75"
+                    android:src="@drawable/elshikh_img_sq"
+                    android:scaleType="fitXY"/>
+
+                <TextView
+                    android:id="@+id/home_mychikh_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@drawable/white_half_round_blue"
+                    android:fontFamily="@font/segoe_ui_bold"
+                    android:text="@string/elchiekh"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_weight="0.25"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+
+
+        </com.balysv.materialripple.MaterialRippleLayout>
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/home_schedule_mrl"
+            style="@style/RippleStyleWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/mrl_3"
+            app:layout_constraintEnd_toStartOf="@+id/home_myshiekh_mrl"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="112dp"
+                android:layout_height="124dp"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.75"
+                    android:src="@drawable/schedule_img_sq"
+                    android:scaleType="fitXY"/>
+
+                <TextView
+                    android:id="@+id/home_schedule_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@drawable/white_half_round_blue"
+                    android:fontFamily="@font/segoe_ui_bold"
+                    android:text="@string/schedule"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_weight="0.25"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+
+        </com.balysv.materialripple.MaterialRippleLayout>
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/mrl_3"
+            style="@style/RippleStyleWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/home_myshiekh_mrl"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@id/home_schedule_mrl"
+            app:layout_constraintTop_toBottomOf="@+id/home_schedule_mrl">
+
+            <LinearLayout
+                android:layout_width="112dp"
+                android:layout_height="124dp"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.75"
+                    android:src="@drawable/class_room_img_sq"
+                    android:scaleType="fitXY"/>
+
+                <TextView
+                    android:id="@+id/home_class_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@drawable/white_half_round_blue"
+                    android:fontFamily="@font/segoe_ui_bold"
+                    android:text="@string/class_room"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_weight="0.25"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+
+
+        </com.balysv.materialripple.MaterialRippleLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.activities.destinations.SplashFragment">
+    tools:context=".presentation.activities.SplashFragment">
 
     <ImageView
         android:id="@+id/splash_logo"
@@ -31,8 +31,8 @@
         android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/splash_logo" />
-
+        app:layout_constraintTop_toBottomOf="@+id/splash_logo"
+        android:visibility="invisible"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
