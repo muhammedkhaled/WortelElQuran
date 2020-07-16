@@ -22,7 +22,7 @@ public class ExtraSessionFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         extraSessionViewModel =
                 ViewModelProviders.of(this).get(ExtraSessionViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_gallery, container, false);
+        View root = inflater.inflate(R.layout.fragment_extra_session, container, false);
         final TextView textView = root.findViewById(R.id.text_gallery);
         extraSessionViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override

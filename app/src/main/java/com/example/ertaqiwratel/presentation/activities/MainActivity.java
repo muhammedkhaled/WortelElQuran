@@ -2,20 +2,23 @@ package com.example.ertaqiwratel.presentation.activities;
 
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.Menu;
-
-import com.example.ertaqiwratel.R;
-import com.google.android.material.navigation.NavigationView;
+import android.view.View;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
+import androidx.core.view.ViewCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
+import androidx.navigation.NavDestination;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
+
+import com.example.ertaqiwratel.R;
+import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        final Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         final DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -33,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_profile, R.id.nav_extra, R.id.nav_admin)
+                R.id.nav_home, R.id.nav_profile, R.id.nav_extra, R.id.nav_admin)
                 .setDrawerLayout(drawer)
                 .build();
         final NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
@@ -45,6 +48,9 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
 
                 switch (menuItem.getItemId()) {
+                    case R.id.nav_home:
+                        navController.navigate(R.id.nav_home);
+                        break;
                     case R.id.nav_profile:
                         navController.navigate(R.id.nav_profile);
                         break;
@@ -59,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                 }
 
+                ViewCompat.setLayoutDirection(drawer,ViewCompat.LAYOUT_DIRECTION_RTL);
 
                 //This is for maintaining the behavior of the Navigation view
                 NavigationUI.onNavDestinationSelected(menuItem, navController);
@@ -67,13 +74,19 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
-    }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.nafigation_drawer, menu);
-        return true;
+        navController.addOnDestinationChangedListener(new NavController.OnDestinationChangedListener() {
+            @Override
+            public void onDestinationChanged(@NonNull NavController controller, @NonNull NavDestination destination, @Nullable Bundle arguments) {
+
+                if (destination.getId() == R.id.myChiehkFrament) {
+                    findViewById(R.id.chat_toolbar_constraintL).setVisibility(View.VISIBLE);
+                    toolbar.setNavigationIcon(null);
+                } else {
+                    findViewById(R.id.chat_toolbar_constraintL).setVisibility(View.GONE);
+                }
+            }
+        });
     }
 
     @Override
