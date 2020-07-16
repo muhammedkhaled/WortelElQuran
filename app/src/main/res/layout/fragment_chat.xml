@@ -30,7 +30,7 @@
 
         <EditText
             android:id="@+id/etMessage"
-            android:layout_width="137dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="اكتب رساله"
@@ -38,7 +38,8 @@
             android:paddingStart="5dp"
             android:paddingEnd="5dp"
             android:textColor="@android:color/white"
-            android:textColorHint="@android:color/white" />
+            android:textColorHint="@android:color/white"
+            android:inputType="textLongMessage"/>
 
         <Button
             android:id="@+id/btnSend"

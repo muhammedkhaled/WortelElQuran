@@ -32,8 +32,6 @@ public class AdminChatFragment extends Fragment {
     private LinearLayoutManager mLayoutManger;
     private MessageAdapter mAdapter;
 
-    private AdminChatViewModel adminChatViewModel;
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,15 +39,8 @@ public class AdminChatFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        adminChatViewModel =
-                ViewModelProviders.of(this).get(AdminChatViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_chat, container, false);
-        adminChatViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
 
-            }
-        });
+        View root = inflater.inflate(R.layout.fragment_chat, container, false);
         return root;
     }
 

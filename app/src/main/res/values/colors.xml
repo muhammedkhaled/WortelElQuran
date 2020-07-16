@@ -4,10 +4,9 @@
     <color name="colorPrimaryLight">#B1DCF2</color>
     <color name="colorPrimaryDark">#559ED0</color>
     <color name="colorAccent">#D3EBEF</color>
-    <color name="color">#F2FF37</color>
-    <color name="green">#74C240</color>
+    <color name="yellow">#F2FF37</color>
+    <color name="green">#32CD32</color>
     <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>
     <color name="red">#DF1B1B</color>
-
 </resources>

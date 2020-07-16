@@ -36,7 +36,8 @@
             android:paddingStart="5dp"
             android:paddingEnd="5dp"
             android:textColor="@android:color/white"
-            android:textColorHint="@android:color/white" />
+            android:textColorHint="@android:color/white"
+            android:inputType="textLongMessage"/>
 
         <ImageButton
             android:id="@+id/btnSend"

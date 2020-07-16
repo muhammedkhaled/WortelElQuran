@@ -6,20 +6,26 @@ import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import com.example.ertaqiwratel.R;
+import com.example.ertaqiwratel.databinding.FragmentSplashBinding;
 
 public class SplashFragment extends Fragment {
+    private FragmentSplashBinding binding;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_splash, container, false);
+        binding = FragmentSplashBinding.inflate(inflater, container, false);
+        return binding.getRoot();
     }
 
     @Override
@@ -27,15 +33,13 @@ public class SplashFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         final boolean isFirstTime = true;
 
-        final TextView splashAppName = view.findViewById(R.id.splash_app_name);
-
         // wait 1 seconds to show text with app name
-        // todo add some animation
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                splashAppName.setVisibility(View.VISIBLE);
+                setAnimations();
             }
+
         },1000);
 
         // wait 3 seconds to do this
@@ -52,5 +56,13 @@ public class SplashFragment extends Fragment {
                 }
             }
         },3000);
+    }
+
+
+    private void setAnimations() {
+        Animation animation = AnimationUtils.loadAnimation(getActivity(), R.anim.fad_in);
+        binding.splashAppName.setVisibility(View.VISIBLE);
+        binding.splashAppName.setAnimation(animation);
+
     }
 }

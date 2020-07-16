@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">ورتل القرأن</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="title_activity_nafigation_drawer">NafigationDrawer</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -30,4 +29,37 @@
     <string name="chiekh_name">اﻷسم</string>
     <string name="video_call">video_call</string>
     <string name="audio_call">audio_call</string>
+
+    <string name="saturday">السبت</string>
+    <string name="regular_date">15 مايو</string>
+    <string name="higri_date">5 شوال</string>
+    <string name="attendance">الحضور</string>
+    <string name="new_save">حفظ جديد</string>
+    <string name="rate_new_save">10/8</string>
+    <string name="near_past">ماضي قريب</string>
+    <string name="far_past">ماضي بعيد</string>
+    <string name="metn">المتن</string>
+    <string name="check">check</string>
+
+    <string name="year">2020</string>
+    <string name="slash">/</string>
+    <string name="save">حفظ</string>
+    <string name="sora">سورة الواقعة من 1 الى 2</string>
+    <string name="student_table">جدول الطالب</string>
+    <string name="student_chat">محادثة مع الطالب</string>
+    <string name="ratel">ورتل القرآن</string>
+    <string-array name="rate">
+        <item>10/1</item>
+        <item>10/2</item>
+        <item>10/3</item>
+        <item>10/4</item>
+        <item>10/5</item>
+        <item>10/6</item>
+        <item>10/7</item>
+        <item>10/8</item>
+        <item>10/9</item>
+        <item>10/10</item>
+    </string-array>
+
+
 </resources>

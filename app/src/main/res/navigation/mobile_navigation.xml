@@ -6,6 +6,33 @@
     app:startDestination="@id/nav_home">
 
     <fragment
+        android:id="@+id/timeTableFragment"
+        android:name="com.example.ertaqiwratel.presentation.activities.destinations.TimeTableFragment"
+        android:label="fragment_time_table"
+        tools:layout="@layout/fragment_time_table">
+    </fragment>
+    <fragment
+        android:id="@+id/addNewTableForStudentFragment"
+        android:name="com.example.ertaqiwratel.presentation.activities.destinations.AddNewTableForStudentFragment"
+        android:label="fragment_add_new_table_for_student"
+        tools:layout="@layout/fragment_add_new_table_for_student" />
+    <fragment
+        android:id="@+id/studentFragment"
+        android:name="com.example.ertaqiwratel.presentation.activities.destinations.StudentFragment"
+        android:label="fragment_student"
+        tools:layout="@layout/fragment_student">
+        <action
+            android:id="@+id/action_studentFragment_to_addNewTableForStudentFragment"
+            app:destination="@id/addNewTableForStudentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.ertaqiwratel.presentation.activities.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+    </fragment>
+
+    <fragment
         android:id="@+id/nav_home"
         android:name="com.example.ertaqiwratel.presentation.activities.navUi.home.HomeFragment"
         android:label="@string/home_screen"
@@ -41,10 +68,6 @@
             app:popUpToInclusive="true" />
 
     </fragment>
-<!--    <fragment
-        android:id="@+id/myChiekhInfo"
-        android:name="com.example.ertaqiwratel.presentation.activities.ChiekhInfoDialog"
-        tools:layout="@layout/dialog_chiekh_info" />-->
 
     <dialog
         android:id="@+id/chiehk_info_dialog"
