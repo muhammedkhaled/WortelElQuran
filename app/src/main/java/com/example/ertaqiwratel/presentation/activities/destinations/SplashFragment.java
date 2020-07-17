@@ -1,4 +1,4 @@
-package com.example.ertaqiwratel.presentation.activities;
+package com.example.ertaqiwratel.presentation.activities.destinations;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,15 +8,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.Navigation;
 
 import com.example.ertaqiwratel.R;
 import com.example.ertaqiwratel.databinding.FragmentSplashBinding;
+import com.example.ertaqiwratel.presentation.activities.LandingActivity;
+import com.example.ertaqiwratel.presentation.activities.MainActivity;
 
 public class SplashFragment extends Fragment {
     private FragmentSplashBinding binding;
@@ -51,7 +51,7 @@ public class SplashFragment extends Fragment {
                     ((LandingActivity) getActivity()).hideStarterFragment();
                 }else {
                     // go to mainActivity
-                    new Intent((LandingActivity)getActivity(),MainActivity.class);
+                    startActivity(new Intent((LandingActivity)getActivity(), MainActivity.class));
                     getActivity().finish();
                 }
             }

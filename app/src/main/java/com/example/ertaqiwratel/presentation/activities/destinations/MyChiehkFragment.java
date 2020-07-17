@@ -1,4 +1,4 @@
-package com.example.ertaqiwratel.presentation.activities;
+package com.example.ertaqiwratel.presentation.activities.destinations;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -7,6 +7,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -15,16 +16,24 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
 import com.example.ertaqiwratel.R;
+import com.example.ertaqiwratel.databinding.FragmentMyChiehkBinding;
+import com.example.ertaqiwratel.presentation.activities.adapter.MessageAdapter;
+import com.example.ertaqiwratel.presentation.activities.pojo.MessageResponse;
+
+import java.util.ArrayList;
 
 public class MyChiehkFragment extends Fragment {
-    NavController navController;
+    private NavController navController;
+    private MessageAdapter messageAdapter;
+    private FragmentMyChiehkBinding chiehkBinding;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         setHasOptionsMenu(true);
         navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment);
-        return inflater.inflate(R.layout.fragment_my_chiehk, container, false);
+        chiehkBinding = FragmentMyChiehkBinding.inflate(inflater, container, false);
+        return chiehkBinding.getRoot();
     }
 
     @Override
@@ -45,6 +54,26 @@ public class MyChiehkFragment extends Fragment {
                         navController.navigate(R.id.action_myChiehkFrament_to_myChiekhInfo);
                     }
                 });
+
+        messageAdapter = new MessageAdapter(new ArrayList<MessageResponse>());
+        chiehkBinding.chiekhRvMessages.setAdapter(messageAdapter);
+        chiehkBinding.chiekhBtnSend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String mMessage = chiehkBinding.chiekhEtMessage.getText().toString().trim();
+                if (mMessage != null && !mMessage.isEmpty()) {
+                    MessageResponse userMessage = new MessageResponse();
+                    userMessage.setUserName("Me");
+                    userMessage.setSender("Me");
+                    userMessage.setMessage(mMessage);
+
+                    messageAdapter.addSingleItem(userMessage);
+                    chiehkBinding.chiekhEtMessage.setText("");
+                } else {
+                    Toast.makeText(getContext(), "اكتب رساله", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 
     @Override

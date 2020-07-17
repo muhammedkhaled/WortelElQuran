@@ -1,4 +1,4 @@
-package com.example.ertaqiwratel.presentation.activities;
+package com.example.ertaqiwratel.presentation.activities.adapter;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -6,7 +6,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.example.ertaqiwratel.presentation.activities.destinations.StudentChatRoomFragment;
-import com.example.ertaqiwratel.presentation.activities.destinations.StudentTableFragment;
+import com.example.ertaqiwratel.presentation.activities.destinations.StudentScheduleFragment;
 
 public class PagerAdapter extends FragmentPagerAdapter {
     private final int numOfTabs;
@@ -23,7 +23,7 @@ public class PagerAdapter extends FragmentPagerAdapter {
             case 0:
                 return new StudentChatRoomFragment();
             case 1:
-                return new StudentTableFragment();
+                return new StudentScheduleFragment();
             default:
                 return null;
         }

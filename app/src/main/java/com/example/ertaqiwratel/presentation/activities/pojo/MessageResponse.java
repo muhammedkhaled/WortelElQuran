@@ -1,4 +1,4 @@
-package com.example.ertaqiwratel.presentation.activities;
+package com.example.ertaqiwratel.presentation.activities.pojo;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

@@ -1,4 +1,4 @@
-package com.example.ertaqiwratel.presentation.activities.navUi.profile;
+package com.example.ertaqiwratel.presentation.activities.destinations.navUi.profile;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

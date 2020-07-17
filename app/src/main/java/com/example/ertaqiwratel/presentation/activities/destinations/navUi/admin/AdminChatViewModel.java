@@ -1,16 +1,16 @@
-package com.example.ertaqiwratel.presentation.activities.navUi.extra;
+package com.example.ertaqiwratel.presentation.activities.destinations.navUi.admin;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class ExtraSessionViewModel extends ViewModel {
+public class AdminChatViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public ExtraSessionViewModel() {
+    public AdminChatViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is gallery fragment");
+        mText.setValue("This is slideshow fragment");
     }
 
     public LiveData<String> getText() {

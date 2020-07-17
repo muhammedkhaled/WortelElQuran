@@ -61,5 +61,12 @@
         <item>10/10</item>
     </string-array>
 
+    <string-array name="attendance_state">
+        <item>حضر</item>
+        <item>اعتذار</item>
+        <item>غياب</item>
+    </string-array>
+
+
 
 </resources>

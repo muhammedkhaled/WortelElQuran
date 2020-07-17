@@ -1,4 +1,4 @@
-package com.example.ertaqiwratel.presentation.activities;
+package com.example.ertaqiwratel.presentation.activities.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ertaqiwratel.R;
+import com.example.ertaqiwratel.presentation.activities.pojo.MessageResponse;
+
 import java.util.List;
 
 public class MessageAdapter extends RecyclerView.Adapter {

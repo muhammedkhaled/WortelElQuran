@@ -11,12 +11,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.ertaqiwratel.databinding.FragmentStudentBinding;
-import com.example.ertaqiwratel.presentation.activities.PagerAdapter;
+import com.example.ertaqiwratel.presentation.activities.adapter.PagerAdapter;
 import com.google.android.material.tabs.TabLayout;
 
 public class StudentFragment extends Fragment {
 
-    public FragmentStudentBinding binding;
+    private FragmentStudentBinding binding;
     private PagerAdapter pagerAdapter;
 
     @Override
@@ -24,8 +24,7 @@ public class StudentFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         binding = FragmentStudentBinding.inflate(inflater, container, false);
-        View view = binding.getRoot();
-        return view;
+        return binding.getRoot();
     }
 
     @Override

@@ -1,6 +1,9 @@
 package com.example.ertaqiwratel.presentation.activities.destinations;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -8,54 +11,46 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
 import com.example.ertaqiwratel.R;
-import com.example.ertaqiwratel.databinding.FragmentStudentTableBinding;
-import com.example.ertaqiwratel.presentation.activities.TimeTableAdapter;
+import com.example.ertaqiwratel.databinding.StudentScheduleFragmentBinding;
+import com.example.ertaqiwratel.presentation.activities.adapter.TimeTableAdapter;
 import com.example.ertaqiwratel.presentation.activities.pojo.TimeTableModel;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class StudentTableFragment extends Fragment {
+public class StudentScheduleFragment extends Fragment {
 
-    private FragmentStudentTableBinding binding;
+    private StudentScheduleFragmentBinding scheduleFragmentBinding;
     private List<TimeTableModel> modelList;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        binding = FragmentStudentTableBinding.inflate(inflater, container, false);
-        View view = binding.getRoot();
-        return view;
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
+                             @Nullable Bundle savedInstanceState) {
+        scheduleFragmentBinding = StudentScheduleFragmentBinding.inflate(inflater, container, false);
+        return scheduleFragmentBinding.getRoot();
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
         initData();
         setRecyclerView();
-        addNewItem(view);
-    }
-
-    private void addNewItem(final View view) {
-        binding.fabAddNewTable.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Navigation.findNavController(view).navigate(R.id.action_studentFragment_to_addNewTableForStudentFragment);
-            }
-        });
     }
 
     private void setRecyclerView() {
-        TimeTableAdapter adapter = new TimeTableAdapter(modelList);
-        binding.rvTimeTable.setAdapter(adapter);
-        binding.rvTimeTable.setLayoutManager(new LinearLayoutManager(getActivity()));
+        boolean user_type = StudentScheduleFragmentArgs.fromBundle(getArguments()).getUserType();
+        if (user_type) {
+            scheduleFragmentBinding.fabAddScheduleItem.setVisibility(View.VISIBLE);
+            scheduleFragmentBinding.fabAddScheduleItem
+                    .setOnClickListener(Navigation.createNavigateOnClickListener(R.id.addNewDayFragment));
+        }
+        TimeTableAdapter adapter = new TimeTableAdapter(modelList, user_type);
+        scheduleFragmentBinding.rvStudentSchedule.setAdapter(adapter);
+        scheduleFragmentBinding.rvStudentSchedule.setLayoutManager(new LinearLayoutManager(getActivity()));
     }
+
 
     private void initData() {
         modelList = new ArrayList<>();

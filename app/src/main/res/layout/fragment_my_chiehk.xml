@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.activities.MyChiehkFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.activities.destinations.MyChiehkFragment">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -17,7 +18,7 @@
         android:weightSum="1">
 
         <ImageButton
-            android:id="@+id/btn_cam"
+            android:id="@+id/chiekh_btn_cam"
             android:layout_width="34dp"
             android:layout_height="34dp"
             android:layout_gravity="center"
@@ -27,7 +28,7 @@
             android:gravity="center" />
 
         <EditText
-            android:id="@+id/etMessage"
+            android:id="@+id/chiekh_etMessage"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -40,7 +41,7 @@
             android:inputType="textLongMessage"/>
 
         <ImageButton
-            android:id="@+id/btnSend"
+            android:id="@+id/chiekh_btn_send"
             android:layout_width="34dp"
             android:layout_height="34dp"
             android:layout_gravity="center"
@@ -52,11 +53,12 @@
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_messages"
+        android:id="@+id/chiekh_rv_messages"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/linearLayout"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
 
 </RelativeLayout>

@@ -1,4 +1,4 @@
-package com.example.ertaqiwratel.presentation.activities.navUi.settings;
+package com.example.ertaqiwratel.presentation.activities.destinations.navUi.settings;
 
 import androidx.lifecycle.ViewModel;
 

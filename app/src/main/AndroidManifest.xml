@@ -8,7 +8,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:autoMirrored="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:allowBackup="true">
         <activity android:name=".presentation.activities.LandingActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,7 +20,9 @@
         <activity
             android:name=".presentation.activities.MainActivity"
             android:label="@string/app_name"
-            android:windowSoftInputMode="adjustPan"/>
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            />
+
     </application>
 
 </manifest>

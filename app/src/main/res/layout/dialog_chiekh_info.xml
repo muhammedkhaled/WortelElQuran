@@ -8,7 +8,7 @@
     android:paddingTop="8dp"
     android:paddingEnd="24dp"
     android:paddingBottom="24dp"
-    tools:context=".presentation.activities.ChiekhInfoDialog">
+    tools:context=".presentation.activities.destinations.ChiekhInfoDialog">
 
 
     <de.hdodenhof.circleimageview.CircleImageView
@@ -155,6 +155,5 @@
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="@+id/my_chikh_igaza"
         app:layout_constraintTop_toBottomOf="@+id/my_chikh_igaza" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

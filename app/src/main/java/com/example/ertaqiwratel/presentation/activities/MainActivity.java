@@ -3,6 +3,7 @@ package com.example.ertaqiwratel.presentation.activities;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -19,8 +20,6 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.example.ertaqiwratel.R;
 import com.google.android.material.navigation.NavigationView;
-
-import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -39,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_profile, R.id.nav_extra, R.id.nav_admin)
+                R.id.nav_home, R.id.nav_profile, R.id.nav_extra, R.id.nav_admin, R.id.nav_settings)
                 .setDrawerLayout(drawer)
                 .build();
         final NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
@@ -69,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                 }
 
-                ViewCompat.setLayoutDirection(drawer,ViewCompat.LAYOUT_DIRECTION_RTL);
+                ViewCompat.setLayoutDirection(drawer, ViewCompat.LAYOUT_DIRECTION_RTL);
 
                 //This is for maintaining the behavior of the Navigation view
                 NavigationUI.onNavDestinationSelected(menuItem, navController);
@@ -86,8 +85,19 @@ public class MainActivity extends AppCompatActivity {
                 if (destination.getId() == R.id.myChiehkFrament) {
                     findViewById(R.id.chat_toolbar_constraintL).setVisibility(View.VISIBLE);
                     toolbar.setNavigationIcon(null);
+                    getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE
+                            | WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
+
+                } else if (destination.getId() == R.id.nav_admin) {
+                    findViewById(R.id.chat_toolbar_constraintL).setVisibility(View.GONE);
+                    getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE
+                            | WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
+
                 } else {
                     findViewById(R.id.chat_toolbar_constraintL).setVisibility(View.GONE);
+                    getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN
+                            | WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
+
                 }
             }
         });

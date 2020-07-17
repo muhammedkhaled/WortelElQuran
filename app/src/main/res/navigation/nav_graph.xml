@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_home">
+
+    <activity
+        android:id="@+id/landingActivity"
+        android:name="com.example.ertaqiwratel.presentation.activities.LandingActivity"
+        android:label="activity_landing"
+        tools:layout="@layout/activity_landing" />
+    <fragment
+        android:id="@+id/onBoardingFragment"
+        android:name="com.example.ertaqiwratel.presentation.activities.destinations.OnBoardingFragment"
+        android:label="fragment_on_boarding"
+        tools:layout="@layout/fragment_on_boarding" />
+    <fragment
+        android:id="@+id/splashFragment2"
+        android:name="com.example.ertaqiwratel.presentation.activities.destinations.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment2_to_onBoardingFragment"
+            app:destination="@id/onBoardingFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.ertaqiwratel.presentation.activities.destinations.navUi.home.HomeFragment"
+        android:label="@string/home_screen"
+        tools:layout="@layout/fragment_student_home">
+        <action
+            android:id="@+id/action_nav_home_to_myChiehkFrament"
+            app:destination="@id/myChiehkFrament" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_profile"
+            app:destination="@id/nav_profile" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_admin"
+            app:destination="@id/nav_admin" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_extra"
+            app:destination="@id/nav_extra" />
+        <action
+            android:id="@+id/action_nav_home_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_studentScheduleFragment"
+            app:destination="@id/studentScheduleFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.ertaqiwratel.presentation.activities.destinations.navUi.profile.ProfileFragment"
+        android:label="@string/profile"
+        tools:layout="@layout/fragmnet_profile">
+        <action
+            android:id="@+id/action_nav_profile_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_extra"
+        android:name="com.example.ertaqiwratel.presentation.activities.destinations.navUi.extra.ExtraSessionFragment"
+        android:label="@string/extra_session"
+        tools:layout="@layout/fragment_extra_session">
+        <action
+            android:id="@+id/action_nav_extra_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_admin"
+        android:name="com.example.ertaqiwratel.presentation.activities.destinations.navUi.admin.AdminChatFragment"
+        android:label="@string/administration"
+        tools:layout="@layout/fragment_chat">
+        <action
+            android:id="@+id/action_nav_admin_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/myChiehkFrament"
+        android:name="com.example.ertaqiwratel.presentation.activities.destinations.MyChiehkFragment"
+        android:label=""
+        tools:layout="@layout/fragment_my_chiehk">
+        <action
+            android:id="@+id/action_myChiehkFrament_to_myChiekhInfo"
+            app:destination="@id/chiehk_info_dialog"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_myChiehkFrament_to_nav_home"
+            app:destination="@id/nav_home" />
+
+    </fragment>
+    <dialog
+        android:id="@+id/chiehk_info_dialog"
+        android:name="com.example.ertaqiwratel.presentation.activities.destinations.ChiekhInfoDialog"
+        tools:layout="@layout/dialog_chiekh_info">
+        <action
+            android:id="@+id/action_chiehk_info_dialog_to_myChiehkFrament"
+            app:destination="@id/myChiehkFrament" />
+    </dialog>
+
+    <fragment
+        android:id="@+id/studentFragment2"
+        android:name="com.example.ertaqiwratel.presentation.activities.destinations.StudentFragment"
+        android:label="fragment_student"
+        tools:layout="@layout/fragment_student" />
+    <fragment
+        android:id="@+id/studentChatRoomFragment"
+        android:name="com.example.ertaqiwratel.presentation.activities.destinations.StudentChatRoomFragment"
+        android:label="fragment_student_chat_room"
+        tools:layout="@layout/fragment_student_chat_room" />
+<!--    <fragment-->
+<!--        android:id="@+id/studentTableFragment"-->
+<!--        android:name="com.example.ertaqiwratel.presentation.activities.destinations.StudentTableFragment"-->
+<!--        android:label="fragment_student_table"-->
+<!--        tools:layout="@layout/">-->
+<!--        <argument-->
+<!--            android:name="user_type"-->
+<!--            app:argType="boolean"-->
+<!--            android:defaultValue="false" />-->
+<!--        <action-->
+<!--            android:id="@+id/action_studentTableFragment_to_addNewDayFragment"-->
+<!--            app:destination="@id/addNewDayFragment" />-->
+<!--    </fragment>-->
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.ertaqiwratel.presentation.activities.destinations.navUi.settings.SettingsFragment"
+        android:label="settings_fragment"
+        tools:layout="@layout/settings_fragment">
+        <action
+            android:id="@+id/action_settingsFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/addNewDayFragment"
+        android:name="com.example.ertaqiwratel.presentation.activities.destinations.AddNewTableForStudentFragment"
+        android:label="add_new_day_fragment"
+        tools:layout="@layout/fragmnet_add_new_day" />
+    <fragment
+        android:id="@+id/studentScheduleFragment"
+        android:name="com.example.ertaqiwratel.presentation.activities.destinations.StudentScheduleFragment"
+        android:label="student_schedule_fragment"
+        tools:layout="@layout/student_schedule_fragment" >
+        <action
+            android:id="@+id/action_studentScheduleFragment_to_addNewDayFragment"
+            app:destination="@id/addNewDayFragment" />
+        <argument
+            android:name="user_type"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </fragment>
+
+</navigation>

@@ -1,9 +1,11 @@
-package com.example.ertaqiwratel.presentation.activities;
+package com.example.ertaqiwratel.presentation.activities.adapter;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
+
+import com.example.ertaqiwratel.presentation.activities.destinations.OnBoardingFragment;
 
 public class OnBoardingSliderPageAdapter extends FragmentPagerAdapter {
 

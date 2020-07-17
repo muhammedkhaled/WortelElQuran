@@ -1,4 +1,4 @@
-package com.example.ertaqiwratel.presentation.activities.navUi.admin;
+package com.example.ertaqiwratel.presentation.activities.destinations.navUi.admin;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,14 +11,12 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ertaqiwratel.R;
-import com.example.ertaqiwratel.presentation.activities.MessageAdapter;
-import com.example.ertaqiwratel.presentation.activities.MessageResponse;
+import com.example.ertaqiwratel.presentation.activities.adapter.MessageAdapter;
+import com.example.ertaqiwratel.presentation.activities.pojo.MessageResponse;
 
 import java.util.ArrayList;
 

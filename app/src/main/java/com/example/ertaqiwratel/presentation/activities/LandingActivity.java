@@ -9,10 +9,12 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.example.ertaqiwratel.R;
+import com.example.ertaqiwratel.presentation.activities.adapter.OnBoardingSliderPageAdapter;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.Locale;
@@ -23,6 +25,10 @@ public class LandingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_landing);
+
+        // make default direction RTL
+        Configuration config = LandingActivity.this.getResources().getConfiguration();
+        config.setLayoutDirection(new Locale("ar"));
     }
 
     public void hideStarterFragment() {
@@ -31,13 +37,9 @@ public class LandingActivity extends AppCompatActivity {
         starterView.setVisibility(View.GONE);
         introView.setVisibility(View.VISIBLE);
 
-        // make default direction RTL
-        Configuration config = LandingActivity.this.getResources().getConfiguration();
-        config.setLayoutDirection(new Locale("ar"));
-
         ViewPager viewPager = findViewById(R.id.pagerIntroSlider);
         TabLayout tabLayout = findViewById(R.id.tabs);
-        final TextView leaveLandingPage = findViewById(R.id.tv_next);
+        final Button leaveLandingPage = findViewById(R.id.btn_next);
 
         final OnBoardingSliderPageAdapter adapter = new OnBoardingSliderPageAdapter(getSupportFragmentManager(),
                 FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);

@@ -1,4 +1,4 @@
-package com.example.ertaqiwratel.presentation.activities;
+package com.example.ertaqiwratel.presentation.activities.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,9 +19,11 @@ import java.util.List;
 
 public class TimeTableAdapter extends RecyclerView.Adapter<TimeTableAdapter.TimeViewHolder> {
     final List<TimeTableModel> tableList;
+    private boolean user_type;
 
-    public TimeTableAdapter(List<TimeTableModel> tableList) {
+    public TimeTableAdapter(List<TimeTableModel> tableList, boolean user_type) {
         this.tableList = tableList;
+        this.user_type = user_type;
     }
 
     @NonNull
@@ -40,7 +42,12 @@ public class TimeTableAdapter extends RecyclerView.Adapter<TimeTableAdapter.Time
         holder.rateFarPast.setText(tableModel.getRateFarPast());
         holder.rateMetn.setText(tableModel.getRateMetn());
         holder.rateNewSave.setText(tableModel.getRateNewSave());
-//        holder.ivEdit.setVisibility(View.GONE);
+
+        if (user_type) {
+            holder.ivEdit.setVisibility(View.VISIBLE);
+        }else {
+            holder.ivEdit.setVisibility(View.GONE);
+        }
 
         boolean isExpandable = tableModel.isExpandable();
         //holder.expandable.setVisibility(isExpandable ? View.VISIBLE : View.GONE);
@@ -82,7 +89,7 @@ public class TimeTableAdapter extends RecyclerView.Adapter<TimeTableAdapter.Time
             rateFarPast = itemView.findViewById(R.id.tv_rate_far_past);
             rateMetn = itemView.findViewById(R.id.tv_rate_metn);
             rateNearPast = itemView.findViewById(R.id.tv_rate_near_past);
-            check = itemView.findViewById(R.id.check_box);
+            check = itemView.findViewById(R.id.spinner_attendance);
             topTitle = itemView.findViewById(R.id.top_title);
             expandable = itemView.findViewById(R.id.expandable);
             ivExpandable = itemView.findViewById(R.id.iv_arrow_expand);

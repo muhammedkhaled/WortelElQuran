@@ -1,4 +1,4 @@
-package com.example.ertaqiwratel.presentation.activities.navUi.profile;
+package com.example.ertaqiwratel.presentation.activities.destinations.navUi.extra;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,13 +14,11 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.ertaqiwratel.R;
 
-
-public class ProfileFragment extends Fragment {
+public class ExtraSessionFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragmnet_profile, container, false);
-
+        View root = inflater.inflate(R.layout.fragment_extra_session, container, false);
         return root;
     }
 }

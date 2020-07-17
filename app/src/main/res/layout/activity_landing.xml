@@ -13,10 +13,11 @@
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/starter_fragment"
-            android:name="com.example.ertaqiwratel.presentation.activities.SplashFragment"
+            android:name="com.example.ertaqiwratel.presentation.activities.destinations.SplashFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             />
+
     </FrameLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -50,18 +51,18 @@
             app:tabIndicatorHeight="0dp" />
 
 
-        <TextView
-            android:id="@+id/tv_next"
+        <Button
+            android:id="@+id/btn_next"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="80dp"
-            android:background="@drawable/blue_rounded_left_corners"
+            android:backgroundTint="@color/colorPrimary"
             android:fontFamily="@font/segoe_ui_bold"
             android:gravity="center"
             android:paddingStart="20dp"
             android:paddingTop="15dp"
             android:paddingEnd="20dp"
-            android:paddingBottom="15dp"
+            android:paddingBottom="24dp"
             android:text="@string/start_tartel_now"
             android:textColor="@android:color/white"
             android:textSize="20sp"
