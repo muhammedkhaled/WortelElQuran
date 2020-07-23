@@ -5,31 +5,11 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@id/nav_home">
 
-    <activity
-        android:id="@+id/landingActivity"
-        android:name="com.example.ertaqiwratel.presentation.activities.LandingActivity"
-        android:label="activity_landing"
-        tools:layout="@layout/activity_landing" />
-    <fragment
-        android:id="@+id/onBoardingFragment"
-        android:name="com.example.ertaqiwratel.presentation.activities.destinations.OnBoardingFragment"
-        android:label="fragment_on_boarding"
-        tools:layout="@layout/fragment_on_boarding" />
-    <fragment
-        android:id="@+id/splashFragment2"
-        android:name="com.example.ertaqiwratel.presentation.activities.destinations.SplashFragment"
-        android:label="fragment_splash"
-        tools:layout="@layout/fragment_splash">
-        <action
-            android:id="@+id/action_splashFragment2_to_onBoardingFragment"
-            app:destination="@id/onBoardingFragment" />
-    </fragment>
-
     <fragment
         android:id="@+id/nav_home"
         android:name="com.example.ertaqiwratel.presentation.activities.destinations.navUi.home.HomeFragment"
         android:label="@string/home_screen"
-        tools:layout="@layout/fragment_student_home">
+        tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_nav_home_to_myChiehkFrament"
             app:destination="@id/myChiehkFrament" />
@@ -110,24 +90,12 @@
         android:name="com.example.ertaqiwratel.presentation.activities.destinations.StudentChatRoomFragment"
         android:label="fragment_student_chat_room"
         tools:layout="@layout/fragment_student_chat_room" />
-<!--    <fragment-->
-<!--        android:id="@+id/studentTableFragment"-->
-<!--        android:name="com.example.ertaqiwratel.presentation.activities.destinations.StudentTableFragment"-->
-<!--        android:label="fragment_student_table"-->
-<!--        tools:layout="@layout/">-->
-<!--        <argument-->
-<!--            android:name="user_type"-->
-<!--            app:argType="boolean"-->
-<!--            android:defaultValue="false" />-->
-<!--        <action-->
-<!--            android:id="@+id/action_studentTableFragment_to_addNewDayFragment"-->
-<!--            app:destination="@id/addNewDayFragment" />-->
-<!--    </fragment>-->
+
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.example.ertaqiwratel.presentation.activities.destinations.navUi.settings.SettingsFragment"
         android:label="settings_fragment"
-        tools:layout="@layout/settings_fragment">
+        tools:layout="@layout/fragment_settings">
         <action
             android:id="@+id/action_settingsFragment_to_nav_home"
             app:destination="@id/nav_home" />
@@ -140,8 +108,8 @@
     <fragment
         android:id="@+id/studentScheduleFragment"
         android:name="com.example.ertaqiwratel.presentation.activities.destinations.StudentScheduleFragment"
-        android:label="student_schedule_fragment"
-        tools:layout="@layout/student_schedule_fragment" >
+        android:label="Title: {title}"
+        tools:layout="@layout/fragment_student_schedule" >
         <action
             android:id="@+id/action_studentScheduleFragment_to_addNewDayFragment"
             app:destination="@id/addNewDayFragment" />
@@ -149,6 +117,10 @@
             android:name="user_type"
             app:argType="boolean"
             android:defaultValue="false" />
+        <argument
+            android:name="title"
+            app:argType="string"
+            android:defaultValue="الجدول" />
     </fragment>
 
 </navigation>

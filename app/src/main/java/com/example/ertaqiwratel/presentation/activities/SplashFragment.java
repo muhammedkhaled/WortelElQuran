@@ -1,4 +1,4 @@
-package com.example.ertaqiwratel.presentation.activities.destinations;
+package com.example.ertaqiwratel.presentation.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +12,8 @@ import android.view.animation.AnimationUtils;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 import com.example.ertaqiwratel.R;
 import com.example.ertaqiwratel.databinding.FragmentSplashBinding;
@@ -32,7 +34,6 @@ public class SplashFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         final boolean isFirstTime = true;
-
         // wait 1 seconds to show text with app name
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -40,7 +41,7 @@ public class SplashFragment extends Fragment {
                 setAnimations();
             }
 
-        },1000);
+        },750);
 
         // wait 3 seconds to do this
         new Handler().postDelayed(new Runnable() {
@@ -51,11 +52,11 @@ public class SplashFragment extends Fragment {
                     ((LandingActivity) getActivity()).hideStarterFragment();
                 }else {
                     // go to mainActivity
-                    startActivity(new Intent((LandingActivity)getActivity(), MainActivity.class));
+                    startActivity(new Intent((LandingActivity)getActivity(), LoginActivity.class));
                     getActivity().finish();
                 }
             }
-        },3000);
+        },2000);
     }
 
 

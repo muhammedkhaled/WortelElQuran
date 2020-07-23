@@ -6,4 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".presentation.activities.destinations.navUi.extra.ExtraSessionFragment">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/extra_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/extra_item"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

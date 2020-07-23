@@ -48,6 +48,9 @@
     <string name="student_table">جدول الطالب</string>
     <string name="student_chat">محادثة مع الطالب</string>
     <string name="ratel">ورتل القرآن</string>
+    <string name="suggestions_and_improvements">الاقتراحات والتحسينات</string>
+    <string name="expenses">المصروفات</string>
+    <string name="email_suffix">\@gmail.com</string>
     <string-array name="rate">
         <item>10/1</item>
         <item>10/2</item>
@@ -61,12 +64,134 @@
         <item>10/10</item>
     </string-array>
 
+    <string-array name="sex">
+        <item>ذكر</item>
+        <item>انثى</item>
+    </string-array>
+
+    <string-array name="new_user_state">
+        <item>جديد</item>
+        <item>مشترك</item>
+    </string-array>
+
+
+    <string-array name="governorate">
+        <item>القاهرة</item>
+        <item>القليوبيه</item>
+        <item>حلوان</item>
+        <item>6 اكتوبر</item>
+        <item>الجيزة</item>
+        <item>الإسكندرية</item>
+        <item>الإسماعيلية</item>
+        <item>الدقهلية</item>
+        <item>البحر الأحمر</item>
+        <item>البحيرة</item>
+        <item>الفيوم</item>
+        <item>الغربية</item>
+        <item>المنوفية</item>
+        <item>المنيا</item>
+        <item>الوادي الجديد</item>
+        <item>الشرقية</item>
+        <item>السويس</item>
+        <item>أسوان</item>
+        <item>أسيوط</item>
+        <item>بني سويف</item>
+        <item>بورسعيد</item>
+        <item>دمياط</item>
+        <item>جنوب سيناء</item>
+        <item>كفرالشيخ</item>
+        <item>مطروح</item>
+        <item>قنا</item>
+        <item>العريش</item>
+        <item>سوهاج</item>
+    </string-array>
+
+    <string-array name="classes">
+        <item>تمهيدى</item>
+        <item>الفرق الاولى</item>
+        <item>الفرق الثانيه</item>
+        <item>الفرق الثالثه</item>
+        <item>الفرق الرابعه</item>
+        <item>الفرق الخامسه</item>
+        <item>الفرق السادسه</item>
+    </string-array>
+
+    <string-array name="days">
+        <item>السبت</item>
+        <item>اﻷحد</item>
+        <item>الاثنين</item>
+        <item>الثلاثاء</item>
+        <item>اﻷربعاء</item>
+        <item>الخميس</item>
+        <item>الجمعه</item>
+    </string-array>
+
+    <string-array name="time">
+        <item> من 08.00 ص - الى 08.30 ص </item>
+        <item> من 08.30 ص - الى 09.00 ص </item>
+        <item> من 09.00 ص - الى 09.30 ص </item>
+        <item> من 10.00 ص - الى 10.30 ص </item>
+        <item> من 10.30 ص - الى 11.00 ص </item>
+        <item> من 11.00 ص - الى 11.30 ص </item>
+        <item> من 11.30 ص - الى 12.00 م </item>
+        <!--        <item> من 12.00 م - الى 12.30 م </item>-->
+        <item> من 12.30 م - الى 01.00 م </item>
+        <item> من 01.00 م - الى 01.30 م </item>
+        <item> من 01.30 م - الى 02.00 م </item>
+        <item> من 02.00 م - الى 02.30 م </item>
+        <item> من 02.30 م - الى 03.00 م </item>
+        <!--        <item> من 03.00 م - الى 03.30 م </item>-->
+        <item> من 03.30 م - الى 04.00 م </item>
+        <item> من 04.00 م - الى 04.30 م </item>
+        <item> من 04.30 م - الى 05.00 م </item>
+        <item> من 05.00 م - الى 05.30 م </item>
+        <item> من 05.30 م - الى 06.00 م </item>
+        <item> من 06.00 م - الى 06.30 م </item>
+        <!--        <item> من 06.30 م - الى 07.00 م </item>-->
+        <item> من 07.00 م - الى 07.30 م </item>
+        <item> من 07.30 م - الى 08.00 م </item>
+        <!--        <item> من 08.00 م - الى 08.30 م </item>-->
+        <item> من 08.30 م - الى 09.00 م </item>
+        <item> من 08.30 م - الى 09.00 م </item>
+        <item> من 09.00 م - الى 09.30 م </item>
+        <item> من 10.00 م - الى 10.30 م </item>
+        <item> من 10.30 م - الى 11.00 م </item>
+        <item> من 11.00 م - الى 11.30 م </item>
+        <item> من 11.30 م - الى 12.00 ص </item>
+    </string-array>
+
+    <string-array name="countries">
+        <item>مصر</item>
+        <item>الجزائر</item>
+        <item>السودان</item>
+        <item>العراق</item>
+        <item>المغرب</item>
+        <item>السعوديه</item>
+        <item>اليمن</item>
+        <item>سوريا</item>
+        <item>الصومال</item>
+        <item>تونس</item>
+        <item>الأردن</item>
+        <item> الإمارات العربية المتحدة</item>
+        <item>لبيا</item>
+        <item>فلسطين</item>
+        <item>عمان</item>
+        <item>الكويت</item>
+        <item>موريتانيا</item>
+        <item>قطر</item>
+        <item>البرحين</item>
+        <item>جيبوتى</item>
+        <item>جزر القمر</item>
+    </string-array>
+
     <string-array name="attendance_state">
         <item>حضر</item>
         <item>اعتذار</item>
         <item>غياب</item>
     </string-array>
-
-
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="schedual">الجدول</string>
 
 </resources>

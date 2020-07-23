@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.activities.destinations.SplashFragment">
+    tools:context=".presentation.activities.SplashFragment">
 
     <ImageView
         android:id="@+id/splash_logo"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:padding="5dp"
-        android:src="@drawable/logo_blue"
+        android:src="@drawable/app_logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

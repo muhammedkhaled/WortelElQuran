@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/startar_nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <include app:graph="@navigation/home_nav_graph" />
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.example.ertaqiwratel.presentation.activities.ForgotPasswordFragment"
+        android:label="تذكر كلمه المرور"
+        tools:layout="@layout/fragment_forgot_password" >
+        <action
+            android:id="@+id/action_forgotPasswordFragment_to_verificationCodeFragment"
+            app:destination="@id/verificationCodeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/verificationCodeFragment"
+        android:name="com.example.ertaqiwratel.presentation.activities.VerificationCodeFragment"
+        android:label="تاكيد رقم الجوال"
+        tools:layout="@layout/fragment_verification_code" >
+        <action
+            android:id="@+id/action_verificationCodeFragment_to_regisInfoFragment"
+            app:destination="@id/regisInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/regisPhoneFragment"
+        android:name="com.example.ertaqiwratel.presentation.activities.RegisPhoneFragment"
+        android:label="انشاء حساب"
+        tools:layout="@layout/fragment_regis_phone" >
+        <action
+            android:id="@+id/action_regisPhoneFragment_to_verificationCodeFragment"
+            app:destination="@id/verificationCodeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/regisInfoFragment"
+        android:name="com.example.ertaqiwratel.presentation.activities.RegisInfoFragment"
+        android:label="استكمال البيانات"
+        tools:layout="@layout/fragment_regis_info" >
+        <action
+            android:id="@+id/action_regisInfoFragment_to_mobile_navigation"
+            app:destination="@id/mobile_navigation" />
+    </fragment>
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.example.ertaqiwratel.presentation.activities.LoginActivity"
+        android:label="activity_login"
+        tools:layout="@layout/activity_login" />
+    <activity
+        android:id="@+id/landingActivity"
+        android:name="com.example.ertaqiwratel.presentation.activities.LandingActivity"
+        android:label="activity_landing"
+        tools:layout="@layout/activity_landing" />
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.ertaqiwratel.presentation.activities.MainActivity"
+        android:label="app_bar_main"
+        tools:layout="@layout/app_bar_main" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.ertaqiwratel.presentation.activities.LoginFragment"
+        android:label=""
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_regisPhoneFragment"
+            app:destination="@id/regisPhoneFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_forgotPasswordFragment"
+            app:destination="@id/forgotPasswordFragment" />
+    </fragment>
+
+</navigation>

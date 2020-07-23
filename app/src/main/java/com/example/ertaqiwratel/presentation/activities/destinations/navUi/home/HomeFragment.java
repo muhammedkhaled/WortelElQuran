@@ -11,16 +11,16 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
 import com.example.ertaqiwratel.R;
-import com.example.ertaqiwratel.databinding.FragmentStudentHomeBinding;
+import com.example.ertaqiwratel.databinding.FragmentHomeBinding;
 
 public class HomeFragment extends Fragment {
-    private FragmentStudentHomeBinding studentHomeBinding;
+    private FragmentHomeBinding studentHomeBinding;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
 
-        studentHomeBinding = FragmentStudentHomeBinding.inflate(inflater, container, false);
+        studentHomeBinding = FragmentHomeBinding.inflate(inflater, container, false);
         return studentHomeBinding.getRoot();
     }
 
@@ -37,6 +37,7 @@ public class HomeFragment extends Fragment {
                     public void onClick(View v) {
                         HomeFragmentDirections.ActionNavHomeToStudentScheduleFragment action =
                                 HomeFragmentDirections.actionNavHomeToStudentScheduleFragment();
+                        // student or chiekh
                         action.setUserType(false);
                         Navigation.findNavController(v).navigate(action);
                     }

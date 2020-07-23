@@ -1,4 +1,4 @@
-package com.example.ertaqiwratel.presentation.activities.destinations;
+package com.example.ertaqiwratel.presentation.activities;
 
 import android.os.Bundle;
 

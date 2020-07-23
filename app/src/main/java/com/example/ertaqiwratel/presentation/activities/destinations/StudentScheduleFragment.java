@@ -12,7 +12,7 @@ import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.ertaqiwratel.R;
-import com.example.ertaqiwratel.databinding.StudentScheduleFragmentBinding;
+import com.example.ertaqiwratel.databinding.FragmentStudentScheduleBinding;
 import com.example.ertaqiwratel.presentation.activities.adapter.TimeTableAdapter;
 import com.example.ertaqiwratel.presentation.activities.pojo.TimeTableModel;
 
@@ -21,13 +21,13 @@ import java.util.List;
 
 public class StudentScheduleFragment extends Fragment {
 
-    private StudentScheduleFragmentBinding scheduleFragmentBinding;
+    private FragmentStudentScheduleBinding scheduleFragmentBinding;
     private List<TimeTableModel> modelList;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        scheduleFragmentBinding = StudentScheduleFragmentBinding.inflate(inflater, container, false);
+        scheduleFragmentBinding = FragmentStudentScheduleBinding.inflate(inflater, container, false);
         return scheduleFragmentBinding.getRoot();
     }
 

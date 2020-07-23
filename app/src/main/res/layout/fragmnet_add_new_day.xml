@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
         android:layout_marginStart="0dp"
-        android:background="@drawable/radius_rectangle_time_table"
+        android:background="@drawable/radius_rectangle_prinmary_light"
         android:paddingBottom="20dp">
 
         <TextView
@@ -74,31 +74,17 @@
             android:text="@string/attendance"
             android:textColor="@color/black"
             android:textSize="@dimen/vsmall"
-            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/view_under_line" />
-
-<!--        <CheckBox-->
-<!--            android:id="@+id/check_box"spinner_attendance-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:buttonTint="@color/green"-->
-<!--            android:checked="false"-->
-<!--            app:layout_constraintBottom_toBottomOf="@id/tv_attendance"-->
-<!--            app:layout_constraintEnd_toEndOf="@+id/spinner_new_sura"-->
-<!--            app:layout_constraintStart_toEndOf="@+id/txl1"-->
-<!--            app:layout_constraintTop_toTopOf="@+id/tv_attendance" />-->
 
         <Spinner
             android:id="@+id/spinner_attendance"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
-            android:layout_marginEnd="8dp"
             android:drawSelectorOnTop="true"
             android:entries="@array/attendance_state"
             app:layout_constraintBottom_toBottomOf="@id/tv_attendance"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/txl1"
+            app:layout_constraintEnd_toEndOf="@+id/spinner_new_sura"
             app:layout_constraintTop_toTopOf="@+id/tv_attendance" />
 
         <com.google.android.material.textfield.TextInputLayout
@@ -106,13 +92,20 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
-            android:textColorHint="@color/black"
-            app:hintTextColor="@color/black"
             app:hintEnabled="true"
+            app:hintTextColor="@color/black"
+            android:textColorHint="@color/dark_gray"
             app:layout_constraintStart_toStartOf="@id/tv_attendance"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintEnd_toStartOf="@id/spinner_new_sura"
-            app:layout_constraintTop_toBottomOf="@+id/tv_attendance">
+            app:layout_constraintTop_toBottomOf="@+id/tv_attendance"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusTopStart="8dp"
+            app:boxStrokeWidth="2dp"
+            app:boxStrokeColor="@color/colorPrimary">
 
             <EditText
                 android:id="@+id/new_sura_et"
@@ -121,7 +114,8 @@
                 android:hint="الحفظ الجديد"
                 android:inputType="textShortMessage"
                 android:textColor="@color/black"
-                android:textSize="18sp"/>
+                android:textSize="18sp"
+                android:singleLine="true"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -145,13 +139,20 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:textColorHint="@color/black"
-            app:hintTextColor="@color/black"
             app:hintEnabled="true"
+            app:hintTextColor="@color/black"
+            android:textColorHint="@color/dark_gray"
             app:layout_constraintStart_toStartOf="@id/tv_attendance"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintEnd_toStartOf="@id/spinner_neer_past_sura"
-            app:layout_constraintTop_toBottomOf="@+id/txl1">
+            app:layout_constraintTop_toBottomOf="@+id/txl1"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusTopStart="8dp"
+            app:boxStrokeColor="@color/colorPrimary"
+            app:boxStrokeWidth="2dp">
 
             <EditText
                 android:id="@+id/neer_past_sura_et"
@@ -160,7 +161,8 @@
                 android:hint="الماضى القريب"
                 android:inputType="textShortMessage"
                 android:textColor="@color/black"
-                android:textSize="18sp"/>
+                android:textSize="18sp"
+                android:singleLine="true"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -184,13 +186,20 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:textColorHint="@color/black"
-            app:hintTextColor="@color/black"
             app:hintEnabled="true"
+            app:hintTextColor="@color/black"
+            android:textColorHint="@color/dark_gray"
             app:layout_constraintStart_toStartOf="@id/tv_attendance"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintEnd_toStartOf="@id/spinner_far_past_sura"
-            app:layout_constraintTop_toBottomOf="@+id/txl2">
+            app:layout_constraintTop_toBottomOf="@+id/txl2"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusTopStart="8dp"
+            app:boxStrokeColor="@color/colorPrimary"
+            app:boxStrokeWidth="2dp">
 
             <EditText
                 android:id="@+id/far_past_sura_et"
@@ -199,7 +208,8 @@
                 android:hint="الماضى البعيد"
                 android:inputType="textShortMessage"
                 android:textColor="@color/black"
-                android:textSize="18sp"/>
+                android:textSize="18sp"
+                android:singleLine="true"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -222,13 +232,20 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:textColorHint="@color/black"
             app:hintTextColor="@color/black"
             app:hintEnabled="true"
+            android:textColorHint="@color/dark_gray"
             app:layout_constraintEnd_toStartOf="@id/spinner_meton"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/tv_attendance"
-            app:layout_constraintTop_toBottomOf="@+id/txl3">
+            app:layout_constraintTop_toBottomOf="@+id/txl3"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusTopStart="8dp"
+            app:boxStrokeColor="@color/colorPrimary"
+            app:boxStrokeWidth="2dp">
 
             <EditText
                 android:id="@+id/meton_et"
@@ -237,7 +254,8 @@
                 android:hint="المتون"
                 android:inputType="textShortMessage"
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:singleLine="true"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 

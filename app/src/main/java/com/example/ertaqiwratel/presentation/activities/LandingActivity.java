@@ -1,17 +1,16 @@
 package com.example.ertaqiwratel.presentation.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.fragment.app.FragmentPagerAdapter;
-import androidx.viewpager.widget.ViewPager;
-
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
-import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 import com.example.ertaqiwratel.R;
 import com.example.ertaqiwratel.presentation.activities.adapter.OnBoardingSliderPageAdapter;
@@ -26,10 +25,15 @@ public class LandingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_landing);
 
-        // make default direction RTL
-        Configuration config = LandingActivity.this.getResources().getConfiguration();
-        config.setLayoutDirection(new Locale("ar"));
+        // set local to ar to change app direction to rtl and language to ar
+        Locale locale = new Locale("ar");
+        Locale.setDefault(locale);
+        Configuration config =
+                getBaseContext().getResources().getConfiguration();
+        config.setLocale(locale);
+        createConfigurationContext(config);
     }
+
 
     public void hideStarterFragment() {
         FrameLayout starterView = findViewById(R.id.fragment_view);
@@ -78,7 +82,7 @@ public class LandingActivity extends AppCompatActivity {
 
 
     private void leaveLandingPage() {
-        Intent intent = new Intent(LandingActivity.this, MainActivity.class);
+        Intent intent = new Intent(LandingActivity.this, LoginActivity.class);
         startActivity(intent);
         finish();
     }

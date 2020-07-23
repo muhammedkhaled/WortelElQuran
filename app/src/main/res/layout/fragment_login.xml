@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.activities.LoginFragment">
+
+    <ImageView
+        android:id="@+id/app_logo_imgView"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/app_logo"
+        app:layout_constraintBottom_toTopOf="@+id/app_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        />
+
+    <TextView
+        android:id="@+id/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/andalus"
+        android:text="@string/app_name"
+        android:textColor="@android:color/black"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="@+id/app_logo_imgView"
+        app:layout_constraintStart_toStartOf="@+id/app_logo_imgView"
+        app:layout_constraintTop_toBottomOf="@+id/app_logo_imgView" />
+
+    <TextView
+        android:id="@+id/tv_dec_phone_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18sp"
+        android:padding="4dp"
+        android:text="من فضلك ادخل رقم الجوال"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/app_name"
+        app:layout_constraintStart_toStartOf="@+id/app_name"
+        app:layout_constraintTop_toBottomOf="@+id/app_name" />
+
+    <LinearLayout
+        android:id="@+id/reg_phone_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/white_rounded_blue"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        app:layout_constraintEnd_toEndOf="@+id/tv_dec_phone_number"
+        app:layout_constraintStart_toStartOf="@+id/tv_dec_phone_number"
+        app:layout_constraintTop_toBottomOf="@+id/tv_dec_phone_number">
+
+        <EditText
+            android:id="@+id/login_et_phone"
+            android:layout_width="135dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:inputType="phone"
+            android:maxLength="12"
+            android:maxLines="1"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textColorHint="@android:color/darker_gray"
+            android:textSize="18sp"
+            />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary" />
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/login_cpp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            app:ccpDialog_keyboardAutoPopup="false"
+            app:ccpDialog_textColor="@color/black"
+            app:ccp_arrowSize="18sp"
+            app:ccp_autoDetectCountry="true"
+            app:ccp_countryPreference="EG,SA,TN,AE,LY,OM,MY,KW,PK,DZ,BH,MA,QA,SY,YE,TR"
+            app:ccp_defaultNameCode="EG"
+            app:ccp_hintExampleNumber="true"
+            app:ccp_textSize="12sp" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <TextView
+        android:id="@+id/tv_dec_user_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:padding="4dp"
+        android:text="كلمه المرور"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/app_name"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="@+id/app_name"
+        app:layout_constraintTop_toBottomOf="@+id/reg_phone_ll" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/login_txl_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="@+id/reg_phone_ll"
+        app:layout_constraintStart_toStartOf="@+id/reg_phone_ll"
+        app:layout_constraintTop_toBottomOf="@id/tv_dec_user_type"
+        app:passwordToggleEnabled="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        app:boxCornerRadiusTopStart="8dp"
+        app:boxCornerRadiusBottomEnd="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxStrokeColor="@color/colorPrimary"
+        app:boxStrokeWidthFocused="1dp"
+        >
+
+        <EditText
+            android:id="@+id/login_et_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:maxLength="15"
+            android:paddingEnd="8dp"
+            android:paddingStart="8dp"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/login_tv_forgot_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="?selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="نسيت كلمه المرور؟"
+        android:textColor="@color/colorPrimary"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/login_txl_password"
+        app:layout_constraintTop_toBottomOf="@+id/login_txl_password" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="تسجيل الدخول تلقائى"
+        android:textSize="14sp"
+        android:textColor="@color/colorPrimary"
+        android:buttonTint="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@+id/login_tv_forgot_password"
+        app:layout_constraintStart_toStartOf="@+id/login_txl_password"
+        app:layout_constraintTop_toTopOf="@+id/login_tv_forgot_password" />
+
+    <Button
+        android:id="@+id/reg_btn_login"
+        style="@style/AppTheme.Button"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:enabled="false"
+        android:text="تسجيل الدخول"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/login_txl_password"
+        app:layout_constraintStart_toStartOf="@+id/login_txl_password"
+        app:layout_constraintTop_toBottomOf="@+id/login_tv_forgot_password" />
+
+    <TextView
+        android:id="@+id/tv_dec_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:text="هل لديك حساب؟"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_reg_login"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/reg_btn_login"
+        app:layout_constraintTop_toBottomOf="@+id/reg_btn_login" />
+
+    <TextView
+        android:id="@+id/tv_login_register_now"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="?selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="تسجيل الان"
+        android:textColor="@color/colorPrimary"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/reg_btn_login"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_dec_login"
+        app:layout_constraintTop_toBottomOf="@+id/reg_btn_login" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

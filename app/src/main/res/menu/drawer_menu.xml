@@ -21,10 +21,19 @@
             android:icon="@drawable/ic_add_circle"
             android:title="@string/extra_session" />
         <item
+            android:id="@+id/nav_suggestions"
+            android:icon="@drawable/ic_idea"
+            android:title="@string/suggestions_and_improvements" />
+
+        <item
             android:id="@+id/nav_settings"
             android:icon="@drawable/ic_settings"
             android:title="@string/settings" />
 
+        <item
+            android:id="@+id/nav_expenses"
+            android:icon="@drawable/ic_expenses"
+            android:title="@string/expenses" />
         <item
             android:id="@+id/nav_logout"
             android:icon="@drawable/ic_logout"
