@@ -92,7 +92,7 @@
             android:textStyle="bold" />
 
         <CheckBox
-            android:id="@+id/spinner_attendance"
+            android:id="@+id/attendance_til"
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:layout_below="@id/view_under_line"

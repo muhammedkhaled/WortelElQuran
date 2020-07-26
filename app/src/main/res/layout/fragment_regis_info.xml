@@ -1,46 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.activities.RegisInfoFragment">
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="24dp">
-
-        <ImageView
-            android:id="@+id/app_logo_imgView"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/app_logo"
-            app:layout_constraintBottom_toTopOf="@+id/app_name"
-            app:layout_constraintEnd_toStartOf="@+id/guideline_v2"
-            app:layout_constraintStart_toStartOf="@+id/guideline_v1"
-            app:layout_constraintTop_toTopOf="@+id/guideline" />
+    tools:context=".presentation.activities.loginDestinations.RegisInfoFragment">
 
         <TextView
             android:id="@+id/app_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:fontFamily="@font/andalus"
-            android:text="@string/app_name"
+            android:text="انشاء حساب ف`ى ورتل القران"
             android:textColor="@android:color/black"
-            android:textSize="28sp"
-            app:layout_constraintEnd_toEndOf="@+id/app_logo_imgView"
-            app:layout_constraintStart_toStartOf="@+id/app_logo_imgView"
-            app:layout_constraintTop_toBottomOf="@+id/app_logo_imgView" />
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_v2"
+            app:layout_constraintStart_toStartOf="@+id/guideline_v1"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.025" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline_v1"
@@ -62,9 +39,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
-            android:layout_marginTop="14dp"
+            android:layout_marginTop="12dp"
             android:layout_marginEnd="4dp"
-            android:hint="الاسم بالكامل"
+            android:hint="@string/fullName"
             android:textColorHint="@color/dark_gray"
             app:boxCornerRadiusBottomEnd="8dp"
             app:boxCornerRadiusBottomStart="8dp"
@@ -94,8 +71,8 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:hint="البريد الالكترونى"
+            android:layout_marginTop="4dp"
+            android:hint="@string/email"
             android:textColorHint="@color/dark_gray"
             app:boxCornerRadiusBottomEnd="8dp"
             app:boxCornerRadiusBottomStart="8dp"
@@ -126,8 +103,8 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:hint="كلمه المرور"
+            android:layout_marginTop="4dp"
+            android:hint="@string/password"
             android:textColorHint="@color/dark_gray"
             app:boxCornerRadiusBottomEnd="8dp"
             app:boxCornerRadiusBottomStart="8dp"
@@ -160,8 +137,8 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:hint="تأكيد كلمه المرور"
+            android:layout_marginTop="4dp"
+            android:hint="@string/confirmPassword"
             android:textColorHint="@color/dark_gray"
             app:boxCornerRadiusBottomEnd="8dp"
             app:boxCornerRadiusBottomStart="8dp"
@@ -189,74 +166,25 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/regs_info_birth_date_til"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:hint="تاريخ الميلاد"
-            android:textColorHint="@color/dark_gray"
-            app:boxCornerRadiusBottomEnd="8dp"
-            app:boxCornerRadiusBottomStart="8dp"
-            app:boxCornerRadiusTopEnd="8dp"
-            app:boxCornerRadiusTopStart="8dp"
-            app:boxStrokeColor="@color/colorPrimary"
-            app:boxStrokeWidth="1dp"
-            app:hintTextColor="@color/black"
-            app:layout_constraintEnd_toEndOf="@+id/regs_info_full_name_til"
-            app:layout_constraintStart_toStartOf="@+id/regs_info_full_name_til"
-            app:layout_constraintTop_toBottomOf="@+id/regs_info_con_pass_til"
-            app:endIconDrawable="@drawable/ic_calender_date"
-            app:endIconMode="custom">
 
-            <EditText
-                android:id="@+id/regs_birth_date_et"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="none"
-                android:clickable="true"
-                android:focusable="true"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/regs_info_gender_til"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:hint="النوع"
-            android:textColorHint="@color/black"
-            app:boxCornerRadiusBottomEnd="8dp"
-            app:boxCornerRadiusBottomStart="8dp"
-            app:boxCornerRadiusTopEnd="8dp"
-            app:boxCornerRadiusTopStart="8dp"
-            app:boxStrokeColor="@color/colorPrimary"
-            app:boxStrokeWidth="1dp"
-            app:hintTextColor="@color/black"
-            app:layout_constraintEnd_toEndOf="@+id/regs_info_full_name_til"
-            app:layout_constraintStart_toStartOf="@+id/regs_info_full_name_til"
-            app:layout_constraintTop_toBottomOf="@+id/regs_info_birth_date_til">
-
-            <AutoCompleteTextView
-                android:id="@+id/regs_info_gender_acTv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="none"
-                android:textSize="18sp" />
-
-        </com.google.android.material.textfield.TextInputLayout>
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/regs_info_con_pass_til"
+        app:layout_constraintEnd_toEndOf="@+id/regs_info_full_name_til"
+        app:layout_constraintStart_toStartOf="@+id/regs_info_full_name_til"
+        android:weightSum="1"
+        android:layout_marginTop="4dp"
+        >
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/regs_info_countries_til"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:hint="البلد"
+            android:layout_marginTop="4dp"
+            android:hint="@string/country"
             android:textColorHint="@color/black"
             app:boxCornerRadiusBottomEnd="8dp"
             app:boxCornerRadiusBottomStart="8dp"
@@ -267,7 +195,8 @@
             app:hintTextColor="@color/black"
             app:layout_constraintEnd_toEndOf="@+id/regs_info_full_name_til"
             app:layout_constraintStart_toStartOf="@+id/regs_info_full_name_til"
-            app:layout_constraintTop_toBottomOf="@+id/regs_info_gender_til">
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout1"
+            android:layout_weight="1">
 
             <AutoCompleteTextView
                 android:id="@+id/regs_country_acTv"
@@ -281,10 +210,11 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/regs_info_governorate_til"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:hint="المحافظه"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="4dp"
+            android:hint="@string/governorate"
             android:textColorHint="@color/black"
             app:boxCornerRadiusBottomEnd="8dp"
             app:boxCornerRadiusBottomStart="8dp"
@@ -293,8 +223,8 @@
             app:boxStrokeColor="@color/colorPrimary"
             app:boxStrokeWidth="1dp"
             app:hintTextColor="@color/black"
-            app:layout_constraintEnd_toEndOf="@+id/regs_info_full_name_til"
-            app:layout_constraintStart_toStartOf="@+id/regs_info_full_name_til"
+            app:layout_constraintEnd_toEndOf="@+id/regs_info_countries_til"
+            app:layout_constraintStart_toStartOf="@+id/regs_info_countries_til"
             app:layout_constraintTop_toBottomOf="@+id/regs_info_countries_til"
             android:visibility="gone">
 
@@ -307,13 +237,25 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout1"
+        app:layout_constraintEnd_toEndOf="@+id/regs_info_full_name_til"
+        app:layout_constraintStart_toStartOf="@+id/regs_info_full_name_til"
+        android:weightSum="1"
+        android:layout_marginTop="4dp"
+        >
+
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/regs_info_stState_til"
+            android:id="@+id/regs_info_gender_til"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:hint="الحاله"
+            android:hint="@string/gender"
             android:textColorHint="@color/black"
             app:boxCornerRadiusBottomEnd="8dp"
             app:boxCornerRadiusBottomStart="8dp"
@@ -323,162 +265,11 @@
             app:boxStrokeWidth="1dp"
             app:hintTextColor="@color/black"
             app:layout_constraintEnd_toEndOf="@+id/regs_info_full_name_til"
-            app:layout_constraintStart_toStartOf="@+id/regs_info_full_name_til"
-            app:layout_constraintTop_toBottomOf="@+id/regs_info_governorate_til">
+            app:layout_constraintTop_toBottomOf="@+id/regs_info_con_pass_til"
+            >
 
             <AutoCompleteTextView
-                android:id="@+id/regs_info_stState_acTv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="none"
-                android:textSize="18sp" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/regs_info_quran_amount_til"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:hint="مقدار الحفظ السابق"
-            android:textColorHint="@color/dark_gray"
-            app:boxCornerRadiusBottomEnd="8dp"
-            app:boxCornerRadiusBottomStart="8dp"
-            app:boxCornerRadiusTopEnd="8dp"
-            app:boxCornerRadiusTopStart="8dp"
-            app:boxStrokeColor="@color/colorPrimary"
-            app:boxStrokeWidth="1dp"
-            app:hintTextColor="@color/black"
-            app:layout_constraintEnd_toEndOf="@+id/regs_info_full_name_til"
-            app:layout_constraintStart_toStartOf="@+id/regs_info_full_name_til"
-            app:layout_constraintTop_toBottomOf="@id/regs_info_stState_til"
-            android:visibility="gone"
-            app:counterEnabled="true"
-            app:counterMaxLength="150"
-            app:helperText="مقدار الحفظ ان وجد">
-
-            <EditText
-                android:id="@+id/regs_info_quran_amount_et"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textLongMessage"
-                android:maxLength="150"
-                android:maxLines="1"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/regs_info_class_til"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:hint="الفرقه"
-            android:textColorHint="@color/black"
-            app:boxCornerRadiusBottomEnd="8dp"
-            app:boxCornerRadiusBottomStart="8dp"
-            app:boxCornerRadiusTopEnd="8dp"
-            app:boxCornerRadiusTopStart="8dp"
-            app:boxStrokeColor="@color/colorPrimary"
-            app:boxStrokeWidth="1dp"
-            app:hintTextColor="@color/black"
-            app:layout_constraintEnd_toEndOf="@+id/regs_info_full_name_til"
-            app:layout_constraintStart_toStartOf="@+id/regs_info_full_name_til"
-            app:layout_constraintTop_toBottomOf="@+id/regs_info_quran_amount_til"
-            android:visibility="gone">
-
-            <AutoCompleteTextView
-                android:id="@+id/regs_info_class_acTv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="none"
-                android:textSize="18sp" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/regs_info_day_til"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:hint="اليوم المناسب"
-            android:textColorHint="@color/black"
-            app:boxCornerRadiusBottomEnd="8dp"
-            app:boxCornerRadiusBottomStart="8dp"
-            app:boxCornerRadiusTopEnd="8dp"
-            app:boxCornerRadiusTopStart="8dp"
-            app:boxStrokeColor="@color/colorPrimary"
-            app:boxStrokeWidth="1dp"
-            app:hintTextColor="@color/black"
-            app:layout_constraintEnd_toEndOf="@+id/regs_info_full_name_til"
-            app:layout_constraintStart_toStartOf="@+id/regs_info_full_name_til"
-            app:layout_constraintTop_toBottomOf="@+id/regs_info_class_til"
-            app:helperText="اليوم المناسب للتسميع الاسبوعي">
-
-            <AutoCompleteTextView
-                android:id="@+id/regs_info_day_acTv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="none"
-                android:textSize="18sp" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/regs_info_time_til"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:hint="التوقيت المناسب"
-            android:textColorHint="@color/black"
-            app:boxCornerRadiusBottomEnd="8dp"
-            app:boxCornerRadiusBottomStart="8dp"
-            app:boxCornerRadiusTopEnd="8dp"
-            app:boxCornerRadiusTopStart="8dp"
-            app:boxStrokeColor="@color/colorPrimary"
-            app:boxStrokeWidth="1dp"
-            app:hintTextColor="@color/black"
-            app:layout_constraintEnd_toEndOf="@+id/regs_info_full_name_til"
-            app:layout_constraintStart_toStartOf="@+id/regs_info_full_name_til"
-            app:layout_constraintTop_toBottomOf="@+id/regs_info_day_til"
-            app:helperText="نصف ساعه للتسميع الاسبوعى">
-
-            <AutoCompleteTextView
-                android:id="@+id/regs_info_time_acTv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="none"
-                android:textSize="18sp" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/regs_info_shiekh_til"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:hint="اسم الشيخ"
-            android:textColorHint="@color/black"
-            app:boxCornerRadiusBottomEnd="8dp"
-            app:boxCornerRadiusBottomStart="8dp"
-            app:boxCornerRadiusTopEnd="8dp"
-            app:boxCornerRadiusTopStart="8dp"
-            app:boxStrokeColor="@color/colorPrimary"
-            app:boxStrokeWidth="1dp"
-            app:hintTextColor="@color/black"
-            app:layout_constraintEnd_toEndOf="@+id/regs_info_full_name_til"
-            app:layout_constraintStart_toStartOf="@+id/regs_info_full_name_til"
-            app:layout_constraintTop_toBottomOf="@+id/regs_info_time_til">
-
-            <AutoCompleteTextView
-                android:id="@+id/regs_info_shiekh_acTv"
+                android:id="@+id/regs_info_gender_acTv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="none"
@@ -487,21 +278,44 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/register_info_btn"
-            style="@style/AppTheme.Button"
+            android:id="@+id/regs_birth_date_btn"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="38dp"
-            android:layout_marginTop="28dp"
-            android:layout_marginEnd="38dp"
-            android:enabled="false"
-            android:text="تسجيل"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/regs_info_full_name_til"
-            app:layout_constraintStart_toStartOf="@+id/regs_info_full_name_til"
-            app:layout_constraintTop_toBottomOf="@+id/regs_info_shiekh_til" />
+            android:layout_marginStart="4dp"
+            android:paddingTop="16.5dip"
+            android:paddingBottom="16.5dip"
+            app:strokeColor="@color/colorPrimary"
+            app:rippleColor="?attr/colorPrimary"
+            android:hint="@string/birthDate"
+            android:textSize="14sp"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:textAlignment="textStart"
+            app:icon="@drawable/ic_calender_date"
+            app:iconTint="@color/black"
+            app:iconGravity="end"
+            app:iconPadding="14dp"
+            android:layout_weight="1"
+            app:cornerRadius="8dp"/>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 
-</ScrollView>
+
+    <Button
+        style="@style/ButtonState"
+        android:id="@+id/register_info_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginTop="12dp"
+        android:enabled="false"
+        android:text="@string/next"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/regs_info_full_name_til"
+        app:layout_constraintStart_toStartOf="@+id/regs_info_full_name_til"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

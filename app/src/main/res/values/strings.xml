@@ -70,8 +70,8 @@
     </string-array>
 
     <string-array name="new_user_state">
-        <item>جديد</item>
-        <item>مشترك</item>
+        <item>اشتراك جديد</item>
+        <item>مشترك سابقا</item>
     </string-array>
 
 
@@ -189,9 +189,54 @@
         <item>اعتذار</item>
         <item>غياب</item>
     </string-array>
+
+    <string name="schedual">الجدول</string>
+    <string name="notifications">notifications</string>
+    <string name="subscription">الاشتراك</string>
+    <string name="thePreviousMemorization">مقدار الحفظ السابق</string>
+    <string name="thSutiableDayForWeeklySession">اليوم المناسب للتسميع الاسبوعي</string>
+    <string name="thSutiableDay">اليوم المناسب</string>
+    <string name="thSutiableTime">التوقيت المناسب</string>
+    <string name="halfHourForWeeklySession">نصف ساعه للتسميع الاسبوعى</string>
+    <string name="shiekhName">اسم الشيخ</string>
+    <string name="register">تسجيل</string>
+    <string name="quranReadings">القراءات</string>
+    <string name="suitableDays">الايام المناسبه</string>
+    <string name="pleaseWriteYourPhoneToSendVerificationMessage">من فضلك ادخل رقم الجوال ليتم ارسال رمز التفعيل</string>
+    <string name="next">استمر</string>
+    <string name="RememberPassword">تذكر كلمه المرور</string>
+    <string name="createAccount">انشاء حساب</string>
+    <string name="phoneConfirmation">تاكيد رقم الجوال</string>
+    <string name="pleaseWriteYourPhone">من فضلك ادخل رقم الجوال</string>
+    <string name="password">كلمه المرور</string>
+    <string name="forgotYourPassword">نسيت كلمه المرور؟</string>
+    <string name="rememberMe">تذكرنى ؟</string>
+    <string name="doYouHaveAnAccount">هل لديك حساب؟</string>
+    <string name="registerNow">سجل الان</string>
+    <string name="birthDate">تاريخ الميلاد</string>
+    <string name="gender">النوع</string>
+    <string name="governorate">المحافظه</string>
+    <string name="country">البلد</string>
+    <string name="confirmPassword">تأكيد كلمه المرور</string>
+    <string name="email">البريد الالكترونى</string>
+    <string name="fullName">الاسم بالكامل</string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="pleaseChooseUserType">يرجى تحديد نوع الحساب</string>
+    <string name="student">طالب</string>
+    <string name="teacher">معلم</string>
+    <string name="pleaseWriteVerificationCode">من فضلك ادخل رمز التفعيل الذى وصلك على الهاتف</string>
+    <string name="resend">اعاده ارسال</string>
+    <string name="degree">الدرجه</string>
+    <string name="meton">المتون</string>
+    <string name="farPast">الماضى البعيد</string>
+    <string name="nearPast">الماضى القريب</string>
+    <string name="newMemorizing">الحفظ الجديد</string>
+    <string name="video">فديو</string>
+    <string name="audio">صوت</string>
+    <string name="sendRequesteToStartSession">ارسال طلب لبدء جلسه</string>
+    <string name="accept">قبول</string>
+    <string name="reject">رفض</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="login">تسجيل الدخول</string>
-    <string name="schedual">الجدول</string>
 
 </resources>

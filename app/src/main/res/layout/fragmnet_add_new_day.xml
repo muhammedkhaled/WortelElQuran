@@ -6,16 +6,20 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center_horizontal"
-    tools:context=".presentation.activities.destinations.AddNewTableForStudentFragment">
+    tools:context=".presentation.activities.homeDesitnations.AddNewTableForStudentFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraint"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="30dp"
-        android:layout_marginStart="0dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="28dp"
         android:background="@drawable/radius_rectangle_prinmary_light"
-        android:paddingBottom="20dp">
+        android:paddingBottom="20dp"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp">
 
         <TextView
             android:id="@+id/tv_day_name"
@@ -64,41 +68,51 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_higri_date" />
 
-        <TextView
-            android:id="@+id/tv_attendance"
-            android:layout_width="wrap_content"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/attendance_til"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="0dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginTop="8dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="18dp"
-            android:fontFamily="@font/segoe_ui"
-            android:text="@string/attendance"
-            android:textColor="@color/black"
-            android:textSize="@dimen/vsmall"
+            android:hint="@string/attendance"
+            android:textColorHint="@color/dark_gray"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusTopStart="8dp"
+            app:boxStrokeColor="@color/colorPrimary"
+            app:boxStrokeWidth="2dp"
+            app:hintTextAppearance="@style/TextAppearance.AppCompat.Small"
+            app:hintTextColor="@color/dark_gray"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/view_under_line" />
+            app:layout_constraintTop_toBottomOf="@+id/view_under_line">
 
-        <Spinner
-            android:id="@+id/spinner_attendance"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:drawSelectorOnTop="true"
-            android:entries="@array/attendance_state"
-            app:layout_constraintBottom_toBottomOf="@id/tv_attendance"
-            app:layout_constraintEnd_toEndOf="@+id/spinner_new_sura"
-            app:layout_constraintTop_toTopOf="@+id/tv_attendance" />
+            <AutoCompleteTextView
+                android:id="@+id/attendenc_acTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:textSize="18sp"
+                android:gravity="center"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/txl1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="18dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="4dp"
             app:hintEnabled="true"
-            app:hintTextColor="@color/black"
+            app:hintTextColor="@color/dark_gray"
             android:textColorHint="@color/dark_gray"
-            app:layout_constraintStart_toStartOf="@id/tv_attendance"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintEnd_toStartOf="@id/spinner_new_sura"
-            app:layout_constraintTop_toBottomOf="@+id/tv_attendance"
+            app:layout_constraintEnd_toStartOf="@id/new_sura_til"
+            app:layout_constraintTop_toBottomOf="@+id/attendance_til"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:boxCornerRadiusBottomEnd="8dp"
             app:boxCornerRadiusBottomStart="8dp"
@@ -111,7 +125,7 @@
                 android:id="@+id/new_sura_et"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="الحفظ الجديد"
+                android:hint="@string/newMemorizing"
                 android:inputType="textShortMessage"
                 android:textColor="@color/black"
                 android:textSize="18sp"
@@ -119,19 +133,37 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <Spinner
-            android:id="@+id/spinner_new_sura"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/new_sura_til"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:hint="@string/degree"
+            android:textColorHint="@color/black"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusTopStart="8dp"
+            app:boxStrokeColor="@color/colorPrimary"
+            app:boxStrokeWidth="2dp"
+            app:hintTextAppearance="@style/TextAppearance.AppCompat.Small"
+            app:hintTextColor="@color/dark_gray"
             app:layout_constraintBottom_toBottomOf="@+id/txl1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/txl1"
-            app:layout_constraintTop_toTopOf="@+id/txl1"
-            android:drawSelectorOnTop="true"
-            android:entries="@array/rate"
-            />
+            app:layout_constraintTop_toTopOf="@+id/txl1">
+
+            <AutoCompleteTextView
+                android:id="@+id/new_sura_acTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:textSize="14sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
 
         <com.google.android.material.textfield.TextInputLayout
@@ -140,11 +172,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             app:hintEnabled="true"
-            app:hintTextColor="@color/black"
+            app:hintTextColor="@color/dark_gray"
             android:textColorHint="@color/dark_gray"
-            app:layout_constraintStart_toStartOf="@id/tv_attendance"
+            app:layout_constraintStart_toStartOf="@id/txl1"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintEnd_toStartOf="@id/spinner_neer_past_sura"
+            app:layout_constraintEnd_toStartOf="@id/neer_past_sura_til"
             app:layout_constraintTop_toBottomOf="@+id/txl1"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:boxCornerRadiusBottomEnd="8dp"
@@ -155,10 +187,10 @@
             app:boxStrokeWidth="2dp">
 
             <EditText
-                android:id="@+id/neer_past_sura_et"
+                android:id="@+id/near_past_sura_et"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="الماضى القريب"
+                android:hint="@string/nearPast"
                 android:inputType="textShortMessage"
                 android:textColor="@color/black"
                 android:textSize="18sp"
@@ -166,20 +198,36 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <Spinner
-            android:id="@+id/spinner_neer_past_sura"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/neer_past_sura_til"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
+            android:layout_marginStart="4dp"
+            android:hint="@string/degree"
+            android:textColorHint="@color/black"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusTopStart="8dp"
+            app:boxStrokeColor="@color/colorPrimary"
+            app:boxStrokeWidth="2dp"
+            app:hintTextAppearance="@style/TextAppearance.AppCompat.Small"
+            app:hintTextColor="@color/dark_gray"
             app:layout_constraintBottom_toBottomOf="@+id/txl2"
-            app:layout_constraintEnd_toEndOf="@+id/spinner_new_sura"
+            app:layout_constraintEnd_toEndOf="@+id/new_sura_til"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@id/txl2"
-            app:layout_constraintTop_toTopOf="@+id/txl2"
-            android:drawSelectorOnTop="true"
-            android:entries="@array/rate"
-            />
+            app:layout_constraintTop_toTopOf="@+id/txl2">
 
+            <AutoCompleteTextView
+                android:id="@+id/neer_past_sura_acTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:textSize="14sp" />
 
+        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/txl3"
@@ -187,11 +235,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             app:hintEnabled="true"
-            app:hintTextColor="@color/black"
+            app:hintTextColor="@color/dark_gray"
             android:textColorHint="@color/dark_gray"
-            app:layout_constraintStart_toStartOf="@id/tv_attendance"
+            app:layout_constraintStart_toStartOf="@id/txl1"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintEnd_toStartOf="@id/spinner_far_past_sura"
+            app:layout_constraintEnd_toStartOf="@id/far_past_sura_til"
             app:layout_constraintTop_toBottomOf="@+id/txl2"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:boxCornerRadiusBottomEnd="8dp"
@@ -205,7 +253,7 @@
                 android:id="@+id/far_past_sura_et"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="الماضى البعيد"
+                android:hint="@string/farPast"
                 android:inputType="textShortMessage"
                 android:textColor="@color/black"
                 android:textSize="18sp"
@@ -213,18 +261,39 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <Spinner
-            android:id="@+id/spinner_far_past_sura"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/far_past_sura_til"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
+            android:layout_marginStart="4dp"
+            android:hint="@string/degree"
+            android:textColorHint="@color/black"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusTopStart="8dp"
+            app:boxStrokeColor="@color/colorPrimary"
+            app:boxStrokeWidth="2dp"
+            app:hintTextAppearance="@style/TextAppearance.AppCompat.Small"
+            app:hintTextColor="@color/dark_gray"
             app:layout_constraintBottom_toBottomOf="@+id/txl3"
-            app:layout_constraintEnd_toEndOf="@+id/spinner_neer_past_sura"
+            app:layout_constraintEnd_toEndOf="@+id/neer_past_sura_til"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@id/txl3"
-            app:layout_constraintTop_toTopOf="@+id/txl3"
-            android:drawSelectorOnTop="true"
-            android:entries="@array/rate"
-            />
+            app:layout_constraintTop_toTopOf="@+id/txl3">
+
+            <AutoCompleteTextView
+                android:id="@+id/far_past_sura_acTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:textSize="14sp"
+                android:entries="@array/rate"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
 
 
         <com.google.android.material.textfield.TextInputLayout
@@ -232,12 +301,12 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            app:hintTextColor="@color/black"
+            app:hintTextColor="@color/dark_gray"
             app:hintEnabled="true"
             android:textColorHint="@color/dark_gray"
-            app:layout_constraintEnd_toStartOf="@id/spinner_meton"
+            app:layout_constraintEnd_toStartOf="@id/meton_til"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="@+id/tv_attendance"
+            app:layout_constraintStart_toStartOf="@+id/txl1"
             app:layout_constraintTop_toBottomOf="@+id/txl3"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:boxCornerRadiusBottomEnd="8dp"
@@ -251,7 +320,7 @@
                 android:id="@+id/meton_et"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="المتون"
+                android:hint="@string/meton"
                 android:inputType="textShortMessage"
                 android:textColor="@color/black"
                 android:textSize="18sp"
@@ -259,18 +328,38 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <Spinner
-            android:id="@+id/spinner_meton"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/meton_til"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
+            android:layout_marginStart="4dp"
+            android:hint="@string/degree"
+            android:textColorHint="@color/black"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusTopStart="8dp"
+            app:boxStrokeColor="@color/colorPrimary"
+            app:boxStrokeWidth="2dp"
+            app:hintTextAppearance="@style/TextAppearance.AppCompat.Small"
+            app:hintTextColor="@color/dark_gray"
             app:layout_constraintBottom_toBottomOf="@+id/txl4"
-            app:layout_constraintEnd_toEndOf="@+id/spinner_far_past_sura"
+            app:layout_constraintEnd_toEndOf="@+id/far_past_sura_til"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/txl4"
-            app:layout_constraintTop_toTopOf="@+id/txl4"
-            android:drawSelectorOnTop="true"
-            android:entries="@array/rate"
-            />
+            app:layout_constraintTop_toTopOf="@+id/txl4">
+
+            <AutoCompleteTextView
+                android:id="@+id/meton_acTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:textSize="14sp"
+                android:entries="@array/rate"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -283,6 +372,9 @@
         android:fontFamily="@font/segoe_ui"
         android:text="@string/save"
         android:textSize="@dimen/small"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        app:cornerRadius="8dp"/>
 
 </LinearLayout>

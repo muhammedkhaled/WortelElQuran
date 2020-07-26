@@ -8,7 +8,7 @@
     android:paddingTop="8dp"
     android:paddingEnd="24dp"
     android:paddingBottom="24dp"
-    tools:context=".presentation.activities.destinations.ChiekhInfoDialog">
+    tools:context=".presentation.activities.homeDesitnations.ChiekhInfoDialog">
 
 
     <de.hdodenhof.circleimageview.CircleImageView

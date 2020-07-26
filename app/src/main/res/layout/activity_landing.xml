@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.activities.LandingActivity"
+    tools:context=".presentation.activities.landingDestinations.LandingActivity"
     >
 
     <FrameLayout
@@ -14,7 +14,7 @@
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/starter_fragment"
-            android:name="com.example.ertaqiwratel.presentation.activities.SplashFragment"
+            android:name="com.example.ertaqiwratel.presentation.activities.landingDestinations.SplashFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 

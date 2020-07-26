@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.activities.VerificationCodeFragment">
+    tools:context=".presentation.activities.loginDestinations.VerificationCodeFragment">
 
 
     <ImageView
@@ -38,7 +38,7 @@
         android:layout_marginTop="18sp"
         android:gravity="center"
         android:padding="4dp"
-        android:text="من فضلك ادخل رمز التفعيل الذى وصلك على الهاتف"
+        android:text="@string/pleaseWriteVerificationCode"
         android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,13 +72,13 @@
         app:layout_constraintGuide_percent="0.05" />
 
     <Button
+        style="@style/ButtonState"
         android:id="@+id/verify_btn"
-        style="@style/AppTheme.Button"
         android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:enabled="false"
-        android:text="استمر"
+        android:text="@string/next"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/otp_view_code"
         app:layout_constraintStart_toStartOf="@+id/otp_view_code"
@@ -92,14 +92,13 @@
         android:background="?selectableItemBackground"
         android:clickable="true"
         android:focusable="true"
-        android:text="اعاده ارسال"
+        android:text="@string/resend"
         android:textColor="@color/colorPrimary"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/verify_btn"
         app:layout_constraintStart_toStartOf="@+id/verify_btn"
         app:layout_constraintTop_toBottomOf="@+id/verify_btn" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

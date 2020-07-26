@@ -54,5 +54,7 @@ dependencies {
     // otp editText
     implementation 'com.github.mukeshsolanki:android-otpview-pinview:2.1.0'
 
-
+}
+repositories {
+    mavenCentral()
 }

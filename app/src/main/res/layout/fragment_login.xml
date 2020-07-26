@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".presentation.activities.LoginFragment">
+    tools:context=".presentation.activities.loginDestinations.LoginFragment">
 
     <ImageView
         android:id="@+id/app_logo_imgView"
@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="18sp"
         android:padding="4dp"
-        android:text="من فضلك ادخل رقم الجوال"
+        android:text="@string/pleaseWriteYourPhone"
         android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/app_name"
@@ -56,6 +56,8 @@
         app:layout_constraintEnd_toEndOf="@+id/tv_dec_phone_number"
         app:layout_constraintStart_toStartOf="@+id/tv_dec_phone_number"
         app:layout_constraintTop_toBottomOf="@+id/tv_dec_phone_number">
+
+
 
         <EditText
             android:id="@+id/login_et_phone"
@@ -90,7 +92,9 @@
             app:ccp_countryPreference="EG,SA,TN,AE,LY,OM,MY,KW,PK,DZ,BH,MA,QA,SY,YE,TR"
             app:ccp_defaultNameCode="EG"
             app:ccp_hintExampleNumber="true"
-            app:ccp_textSize="12sp" />
+            app:ccp_textSize="12sp"
+            app:ccp_showFlag="false"
+            app:ccp_showNameCode="false"/>
     </LinearLayout>
 
     <androidx.constraintlayout.widget.Guideline
@@ -106,7 +110,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:padding="4dp"
-        android:text="كلمه المرور"
+        android:text="@string/password"
         android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/app_name"
@@ -115,7 +119,7 @@
         app:layout_constraintTop_toBottomOf="@+id/reg_phone_ll" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/login_txl_password"
+        android:id="@+id/regs_utype_rg"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -156,34 +160,34 @@
         android:background="?selectableItemBackground"
         android:clickable="true"
         android:focusable="true"
-        android:text="نسيت كلمه المرور؟"
+        android:text="@string/forgotYourPassword"
         android:textColor="@color/colorPrimary"
         android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@+id/login_txl_password"
-        app:layout_constraintTop_toBottomOf="@+id/login_txl_password" />
+        app:layout_constraintEnd_toEndOf="@+id/regs_utype_rg"
+        app:layout_constraintTop_toBottomOf="@+id/regs_utype_rg" />
 
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:text="تسجيل الدخول تلقائى"
+        android:text="@string/rememberMe"
         android:textSize="14sp"
         android:textColor="@color/colorPrimary"
         android:buttonTint="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="@+id/login_tv_forgot_password"
-        app:layout_constraintStart_toStartOf="@+id/login_txl_password"
+        app:layout_constraintStart_toStartOf="@+id/regs_utype_rg"
         app:layout_constraintTop_toTopOf="@+id/login_tv_forgot_password" />
 
     <Button
+        style="@style/ButtonState"
         android:id="@+id/reg_btn_login"
-        style="@style/AppTheme.Button"
         android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
         android:enabled="false"
-        android:text="تسجيل الدخول"
+        android:text="@string/login"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/login_txl_password"
-        app:layout_constraintStart_toStartOf="@+id/login_txl_password"
+        app:layout_constraintEnd_toEndOf="@+id/regs_utype_rg"
+        app:layout_constraintStart_toStartOf="@+id/regs_utype_rg"
         app:layout_constraintTop_toBottomOf="@+id/login_tv_forgot_password" />
 
     <TextView
@@ -192,7 +196,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginTop="8dp"
-        android:text="هل لديك حساب؟"
+        android:text="@string/doYouHaveAnAccount"
         android:textColor="@color/black"
         android:textSize="14sp"
         app:layout_constraintEnd_toStartOf="@+id/tv_reg_login"
@@ -208,7 +212,7 @@
         android:background="?selectableItemBackground"
         android:clickable="true"
         android:focusable="true"
-        android:text="تسجيل الان"
+        android:text="@string/registerNow"
         android:textColor="@color/colorPrimary"
         android:textSize="14sp"
         android:textStyle="bold"
@@ -216,6 +220,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/tv_dec_login"
         app:layout_constraintTop_toBottomOf="@+id/reg_btn_login" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
