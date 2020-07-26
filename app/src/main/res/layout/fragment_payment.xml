@@ -61,7 +61,7 @@
             android:text="@string/if_can_subsribe"
             android:textSize="18sp"
             android:padding="8dp"
-            android:background="@drawable/radius_rectangle_time_table"/>
+            android:background="@drawable/radius_rectangle_prinmary_light"/>
 
     </androidx.cardview.widget.CardView>
 
@@ -101,7 +101,7 @@
             android:paddingTop="14dp"
             android:paddingBottom="14dp"
             android:textAlignment="center"
-            android:background="@drawable/radius_rectangle_time_table"/>
+            android:background="@drawable/radius_rectangle_prinmary_light"/>
 
     </androidx.cardview.widget.CardView>
 
@@ -139,7 +139,7 @@
             android:paddingTop="14dp"
             android:paddingBottom="14dp"
             android:textAlignment="center"
-            android:background="@drawable/radius_rectangle_time_table"/>
+            android:background="@drawable/radius_rectangle_prinmary_light"/>
 
     </androidx.cardview.widget.CardView>
 

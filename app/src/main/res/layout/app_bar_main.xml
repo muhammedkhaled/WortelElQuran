@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.activities.MainActivity">
+    tools:context=".presentation.activities.homeDesitnations.MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -20,11 +20,11 @@
             app:navigationIcon="?attr/homeAsUpIndicator"    >
 
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            00<androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/chat_toolbar_constraintL"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:visibility="gone">
+                android:visibility="visible">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/back_toolbar_ll"
@@ -59,25 +59,25 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <TextView
-                    android:id="@+id/mychiekh_bar_name"
+                    android:id="@+id/user_bar_name"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_alignParentTop="true"
                     android:layout_marginStart="8dp"
-                    android:gravity="center_vertical"
-                    android:text="muhammed khaled abd el aziz muhammd"
                     android:background="?android:attr/selectableItemBackground"
                     android:clickable="true"
                     android:ellipsize="end"
-                    android:maxWidth="175dp"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
                     android:maxLines="1"
-                    android:textColor="@android:color/black"
+                    android:text="muhammed khaled abd el aziz muhammd"
+                    android:textColor="@color/white"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/back_toolbar_ll"
-                    android:focusable="true" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

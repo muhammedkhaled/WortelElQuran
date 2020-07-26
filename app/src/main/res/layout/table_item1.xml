@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="15dp"
-    android:background="@drawable/radius_rectangle_time_table"
+    android:background="@drawable/radius_rectangle_prinmary_light"
     android:padding="15dp">
 
     <LinearLayout
@@ -92,9 +92,9 @@
             android:textStyle="bold" />
 
         <CheckBox
-            android:id="@+id/spinner_attendance"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/attendance_til"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
             android:layout_below="@id/view_under_line"
             android:layout_alignTop="@id/tv_attendance"
             android:layout_alignParentEnd="true"

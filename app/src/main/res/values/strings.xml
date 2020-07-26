@@ -81,6 +81,126 @@
         <item>10/10</item>
     </string-array>
 
+    <string-array name="sex">
+        <item>ذكر</item>
+        <item>انثى</item>
+    </string-array>
+
+    <string-array name="new_user_state">
+        <item>اشتراك جديد</item>
+        <item>مشترك سابقا</item>
+    </string-array>
+
+
+    <string-array name="governorate">
+        <item>القاهرة</item>
+        <item>القليوبيه</item>
+        <item>حلوان</item>
+        <item>6 اكتوبر</item>
+        <item>الجيزة</item>
+        <item>الإسكندرية</item>
+        <item>الإسماعيلية</item>
+        <item>الدقهلية</item>
+        <item>البحر الأحمر</item>
+        <item>البحيرة</item>
+        <item>الفيوم</item>
+        <item>الغربية</item>
+        <item>المنوفية</item>
+        <item>المنيا</item>
+        <item>الوادي الجديد</item>
+        <item>الشرقية</item>
+        <item>السويس</item>
+        <item>أسوان</item>
+        <item>أسيوط</item>
+        <item>بني سويف</item>
+        <item>بورسعيد</item>
+        <item>دمياط</item>
+        <item>جنوب سيناء</item>
+        <item>كفرالشيخ</item>
+        <item>مطروح</item>
+        <item>قنا</item>
+        <item>العريش</item>
+        <item>سوهاج</item>
+    </string-array>
+
+    <string-array name="classes">
+        <item>تمهيدى</item>
+        <item>الفرق الاولى</item>
+        <item>الفرق الثانيه</item>
+        <item>الفرق الثالثه</item>
+        <item>الفرق الرابعه</item>
+        <item>الفرق الخامسه</item>
+        <item>الفرق السادسه</item>
+    </string-array>
+
+    <string-array name="days">
+        <item>السبت</item>
+        <item>اﻷحد</item>
+        <item>الاثنين</item>
+        <item>الثلاثاء</item>
+        <item>اﻷربعاء</item>
+        <item>الخميس</item>
+        <item>الجمعه</item>
+    </string-array>
+
+    <string-array name="time">
+        <item> من 08.00 ص - الى 08.30 ص </item>
+        <item> من 08.30 ص - الى 09.00 ص </item>
+        <item> من 09.00 ص - الى 09.30 ص </item>
+        <item> من 10.00 ص - الى 10.30 ص </item>
+        <item> من 10.30 ص - الى 11.00 ص </item>
+        <item> من 11.00 ص - الى 11.30 ص </item>
+        <item> من 11.30 ص - الى 12.00 م </item>
+        <!--        <item> من 12.00 م - الى 12.30 م </item>-->
+        <item> من 12.30 م - الى 01.00 م </item>
+        <item> من 01.00 م - الى 01.30 م </item>
+        <item> من 01.30 م - الى 02.00 م </item>
+        <item> من 02.00 م - الى 02.30 م </item>
+        <item> من 02.30 م - الى 03.00 م </item>
+        <!--        <item> من 03.00 م - الى 03.30 م </item>-->
+        <item> من 03.30 م - الى 04.00 م </item>
+        <item> من 04.00 م - الى 04.30 م </item>
+        <item> من 04.30 م - الى 05.00 م </item>
+        <item> من 05.00 م - الى 05.30 م </item>
+        <item> من 05.30 م - الى 06.00 م </item>
+        <item> من 06.00 م - الى 06.30 م </item>
+        <!--        <item> من 06.30 م - الى 07.00 م </item>-->
+        <item> من 07.00 م - الى 07.30 م </item>
+        <item> من 07.30 م - الى 08.00 م </item>
+        <!--        <item> من 08.00 م - الى 08.30 م </item>-->
+        <item> من 08.30 م - الى 09.00 م </item>
+        <item> من 08.30 م - الى 09.00 م </item>
+        <item> من 09.00 م - الى 09.30 م </item>
+        <item> من 10.00 م - الى 10.30 م </item>
+        <item> من 10.30 م - الى 11.00 م </item>
+        <item> من 11.00 م - الى 11.30 م </item>
+        <item> من 11.30 م - الى 12.00 ص </item>
+    </string-array>
+
+    <string-array name="countries">
+        <item>مصر</item>
+        <item>الجزائر</item>
+        <item>السودان</item>
+        <item>العراق</item>
+        <item>المغرب</item>
+        <item>السعوديه</item>
+        <item>اليمن</item>
+        <item>سوريا</item>
+        <item>الصومال</item>
+        <item>تونس</item>
+        <item>الأردن</item>
+        <item> الإمارات العربية المتحدة</item>
+        <item>لبيا</item>
+        <item>فلسطين</item>
+        <item>عمان</item>
+        <item>الكويت</item>
+        <item>موريتانيا</item>
+        <item>قطر</item>
+        <item>البرحين</item>
+        <item>جيبوتى</item>
+        <item>جزر القمر</item>
+    </string-array>
+
     <string-array name="attendance_state">
         <item>حضر</item>
         <item>اعتذار</item>
@@ -91,5 +211,53 @@
     <string name="ahmed_sameh">الشيخ / احمد سامح</string>
     <string name="_00_00">00:00</string>
 
+    <string name="schedual">الجدول</string>
+    <string name="notifications">notifications</string>
+    <string name="subscription">الاشتراك</string>
+    <string name="thePreviousMemorization">مقدار الحفظ السابق</string>
+    <string name="thSutiableDayForWeeklySession">اليوم المناسب للتسميع الاسبوعي</string>
+    <string name="thSutiableDay">اليوم المناسب</string>
+    <string name="thSutiableTime">التوقيت المناسب</string>
+    <string name="halfHourForWeeklySession">نصف ساعه للتسميع الاسبوعى</string>
+    <string name="shiekhName">اسم الشيخ</string>
+    <string name="register">تسجيل</string>
+    <string name="quranReadings">القراءات</string>
+    <string name="suitableDays">الايام المناسبه</string>
+    <string name="pleaseWriteYourPhoneToSendVerificationMessage">من فضلك ادخل رقم الجوال ليتم ارسال رمز التفعيل</string>
+    <string name="next">استمر</string>
+    <string name="RememberPassword">تذكر كلمه المرور</string>
+    <string name="createAccount">انشاء حساب</string>
+    <string name="phoneConfirmation">تاكيد رقم الجوال</string>
+    <string name="pleaseWriteYourPhone">من فضلك ادخل رقم الجوال</string>
+    <string name="password">كلمه المرور</string>
+    <string name="forgotYourPassword">نسيت كلمه المرور؟</string>
+    <string name="rememberMe">تذكرنى ؟</string>
+    <string name="doYouHaveAnAccount">هل لديك حساب؟</string>
+    <string name="registerNow">سجل الان</string>
+    <string name="birthDate">تاريخ الميلاد</string>
+    <string name="gender">النوع</string>
+    <string name="governorate">المحافظه</string>
+    <string name="country">البلد</string>
+    <string name="confirmPassword">تأكيد كلمه المرور</string>
+    <string name="email">البريد الالكترونى</string>
+    <string name="fullName">الاسم بالكامل</string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="pleaseChooseUserType">يرجى تحديد نوع الحساب</string>
+    <string name="student">طالب</string>
+    <string name="teacher">معلم</string>
+    <string name="pleaseWriteVerificationCode">من فضلك ادخل رمز التفعيل الذى وصلك على الهاتف</string>
+    <string name="resend">اعاده ارسال</string>
+    <string name="degree">الدرجه</string>
+    <string name="meton">المتون</string>
+    <string name="farPast">الماضى البعيد</string>
+    <string name="nearPast">الماضى القريب</string>
+    <string name="newMemorizing">الحفظ الجديد</string>
+    <string name="video">فديو</string>
+    <string name="audio">صوت</string>
+    <string name="sendRequesteToStartSession">ارسال طلب لبدء جلسه</string>
+    <string name="accept">قبول</string>
+    <string name="reject">رفض</string>
+    <string name="suggestions_and_improvements">الاقتراحات والتحسينات</string>
+    <string name="expenses">تسجيل الخروج</string>
 
 </resources>

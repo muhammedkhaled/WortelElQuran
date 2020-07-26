@@ -5,34 +5,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".presentation.activities.destinations.StudentFragment">
+    tools:context=".presentation.activities.homeDesitnations.StudentFragment">
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tablayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="fill"
-        android:background="@color/colorPrimaryLight"
-        app:tabIndicatorColor="@color/colorPrimaryDark"
+        android:background="@color/colorPrimary"
+        app:tabIndicatorColor="@color/white"
         app:tabInlineLabel="true"
-        app:tabTextColor="@color/colorPrimaryDark">
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:icon="@drawable/message"
-            android:text="@string/student_chat" />
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:icon="@drawable/calendar"
-            android:text="@string/student_table" />
-
-    </com.google.android.material.tabs.TabLayout>
+        app:tabTextAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:tabIndicator="@android:color/white"
+        app:tabIndicatorFullWidth="true"
+        app:tabIndicatorHeight="3dp"
+        app:tabSelectedTextColor="@android:color/black"
+        app:tabTextColor="@android:color/white"
+        app:tabIconTint="@color/white"
+        app:tabMaxWidth="0dp"
+        app:tabGravity="center"
+        app:tabMode="fixed"/>
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
 </LinearLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.activities.homeDesitnations.waitingMessageFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/message_contL"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginEnd="38dp"
+
+        android:background="@drawable/radius_rectangle_prinmary_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/success_mesg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="تم ارسال طلب الالتحاق بنجاح"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.347" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/success_mesg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:text="حفاظا على جوده التعلم سيتم مراجعه الطب والبدء فى اقرب وقت للاستفسار 01125889197"
+            android:textAlignment="center"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_waiting"
+        app:layout_constraintBottom_toTopOf="@+id/message_contL"
+        app:layout_constraintEnd_toEndOf="@+id/message_contL"
+        app:layout_constraintStart_toStartOf="@+id/message_contL"
+        app:layout_constraintTop_toTopOf="@+id/message_contL" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
