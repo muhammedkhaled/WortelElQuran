@@ -170,5 +170,10 @@
         android:name="com.example.ertaqiwratel.VoiceCallFragment"
         android:label="fragment_voice_call"
         tools:layout="@layout/fragment_voice_call" />
+    <fragment
+        android:id="@+id/notifications"
+        android:name="com.example.ertaqiwratel.NotificationsFragment"
+        android:label="fragment_notifications"
+        tools:layout="@layout/fragment_notifications" />
 
 </navigation>
