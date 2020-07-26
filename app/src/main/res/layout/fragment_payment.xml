@@ -25,8 +25,8 @@
         android:text="@string/subscribe"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/img_surface"
+        app:layout_constraintStart_toStartOf="@+id/img_surface"
         app:layout_constraintTop_toBottomOf="@id/img_surface" />
 
     <TextView
@@ -37,8 +37,8 @@
         android:fontFamily="@font/segoe_ui_bold"
         android:text="@string/exception_pay"
         android:textSize="17sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tv_value_pay"
+        app:layout_constraintStart_toStartOf="@+id/tv_value_pay"
         app:layout_constraintTop_toBottomOf="@id/tv_value_pay" />
 
     <androidx.cardview.widget.CardView
@@ -51,21 +51,17 @@
         app:cardCornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_cannot_pay">
+        app:layout_constraintTop_toBottomOf="@id/tv_cannot_pay"
+        >
 
-        <LinearLayout
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimaryLight"
-            android:padding="8dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/segoe_ui_bold"
-                android:text="@string/if_can_subsribe"
-                android:textSize="14sp" />
-        </LinearLayout>
+            android:fontFamily="@font/segoe_ui_bold"
+            android:text="@string/if_can_subsribe"
+            android:textSize="18sp"
+            android:padding="8dp"
+            android:background="@drawable/radius_rectangle_time_table"/>
 
     </androidx.cardview.widget.CardView>
 
@@ -94,22 +90,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_vf_cash">
 
-        <LinearLayout
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimaryLight"
+            android:fontFamily="@font/segoe_ui_bold"
             android:gravity="center"
-            android:padding="18dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/segoe_ui_bold"
-                android:gravity="center"
-                android:text="@string/_01123845380"
-                android:textSize="20sp" />
-
-        </LinearLayout>
+            android:text="@string/_01123845380"
+            android:textSize="20sp"
+            android:paddingTop="14dp"
+            android:paddingBottom="14dp"
+            android:textAlignment="center"
+            android:background="@drawable/radius_rectangle_time_table"/>
 
     </androidx.cardview.widget.CardView>
 
@@ -138,23 +130,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_center_number">
 
-        <LinearLayout
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimaryLight"
-            android:gravity="center"
-            android:padding="16dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/segoe_ui_bold"
-                android:text="@string/_11111111"
-                android:textSize="20sp" />
-
-        </LinearLayout>
+            android:fontFamily="@font/segoe_ui_bold"
+            android:text="@string/_11111111"
+            android:textSize="20sp"
+            android:paddingTop="14dp"
+            android:paddingBottom="14dp"
+            android:textAlignment="center"
+            android:background="@drawable/radius_rectangle_time_table"/>
 
     </androidx.cardview.widget.CardView>
+
     <androidx.cardview.widget.CardView
         android:id="@+id/card_please_send_massage"
         android:layout_width="match_parent"
