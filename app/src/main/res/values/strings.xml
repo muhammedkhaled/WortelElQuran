@@ -48,9 +48,26 @@
     <string name="student_table">جدول الطالب</string>
     <string name="student_chat">محادثة مع الطالب</string>
     <string name="ratel">ورتل القرآن</string>
-    <string name="suggestions_and_improvements">الاقتراحات والتحسينات</string>
-    <string name="expenses">المصروفات</string>
-    <string name="email_suffix">\@gmail.com</string>
+    <string name="privacy_policy">سياسه الخصوصيه</string>
+    <string name="about_wratel">عن ورتل القرأن</string>
+    <string name="welcome_to">مرحبا بك...</string>
+    <string name="language">اللغه</string>
+    <string name="arabic">عربي</string>
+    <string name="english">English</string>
+    <string name="alarm">التنبيه</string>
+    <string name="clock">الساعه</string>
+    <string name="half_an_hour">نصف ساعه</string>
+    <string name="if_can_subsribe">ان كنت تريد الاشتراك معنا لتنال مثل أجر التالين لكتاب الله عز وجل فمرحبا بك وجزاك الله خير الجزاء، فإن من أعان على خير أصابه، قال النبي صلى الله عليه وسلم: من دعا إلى هدى كان له من الأجر مثل أجور من اتبعه إلى يوم القيامة لا ينقص ذلك من أجورهم شيئاً</string>
+    <string name="vf_cash">رقم فودافون كاش</string>
+    <string name="alarm_before_meeting">حيث يتم التنبيه قبل الجلسه</string>
+    <string name="alaa_name">الاء علي</string>
+    <string name="_01123845380">01123845380</string>
+    <string name="center_number">رقم حساب المعهد</string>
+    <string name="_11111111">11111111</string>
+    <string name="pease_send_massage_to_adminstrator">الرجاء ارسال رساله الي الاداره عند التحويل</string>
+    <string name="subscribe">قيمه الاشتراك الشهري 50جنيه</string>
+    <string name="exception_pay">لايوجد حرج لغير القادرين ان شاء الله</string>
+    <string name="add">اضافه</string>
     <string-array name="rate">
         <item>10/1</item>
         <item>10/2</item>
@@ -189,6 +206,10 @@
         <item>اعتذار</item>
         <item>غياب</item>
     </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ahmed_sameh">الشيخ / احمد سامح</string>
+    <string name="_00_00">00:00</string>
 
     <string name="schedual">الجدول</string>
     <string name="notifications">notifications</string>
@@ -236,7 +257,5 @@
     <string name="sendRequesteToStartSession">ارسال طلب لبدء جلسه</string>
     <string name="accept">قبول</string>
     <string name="reject">رفض</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
