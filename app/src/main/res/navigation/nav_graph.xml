@@ -150,5 +150,30 @@
             app:argType="boolean"
             android:defaultValue="false" />
     </fragment>
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.example.ertaqiwratel.PaymentFragment"
+        android:label="fragment_payment"
+        tools:layout="@layout/fragment_payment" />
+    <fragment
+        android:id="@+id/vedioCallFragment"
+        android:name="com.example.ertaqiwratel.VedioCallFragment"
+        android:label="fragment_vedio_call"
+        tools:layout="@layout/fragment_vedio_call" />
+    <fragment
+        android:id="@+id/incomingCallFragment"
+        android:name="com.example.ertaqiwratel.IncomingCallFragment"
+        android:label="fragment_incoming_call"
+        tools:layout="@layout/fragment_incoming_call" />
+    <fragment
+        android:id="@+id/voiceCallFragment"
+        android:name="com.example.ertaqiwratel.VoiceCallFragment"
+        android:label="fragment_voice_call"
+        tools:layout="@layout/fragment_voice_call" />
+    <fragment
+        android:id="@+id/notifications"
+        android:name="com.example.ertaqiwratel.NotificationsFragment"
+        android:label="fragment_notifications"
+        tools:layout="@layout/fragment_notifications" />
 
 </navigation>
