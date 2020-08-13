@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="14sp"
+        android:layout_margin="18dp"
+        android:background="@drawable/radius_rectangle_primary_light">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/extra_chiekh_img"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/profile_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/chiekh_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginBottom="4dp"
+            android:src="@drawable/online_circle"
+            app:layout_constraintBottom_toBottomOf="@id/extra_chiekh_img"
+            app:layout_constraintEnd_toEndOf="@id/extra_chiekh_img" />
+
+        <TextView
+            android:id="@+id/extra_chiekh_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:padding="4dp"
+            android:text="الشيخ/ محمد عبد الغنى"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@id/extra_chiekh_img"
+            app:layout_constraintTop_toTopOf="@id/extra_chiekh_img" />
+
+        <TextView
+            android:id="@+id/extra_chiekh_igaza"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:padding="4dp"
+            android:text="الاجازه : حفص عن عاصم"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="@color/dark_gray"
+            app:layout_constraintStart_toEndOf="@+id/extra_chiekh_img"
+            app:layout_constraintTop_toBottomOf="@+id/extra_chiekh_name" />
+
+        <Button
+            android:id="@+id/extra_send_request_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14sp"
+            android:background="@drawable/solid_blue_radius_corners"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:text="@string/sendRequesteToStartSession"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/extra_chiekh_img"
+            android:visibility="visible"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/consl_call"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/extra_chiekh_img"
+            android:visibility="visible">
+
+            <View
+                android:id="@+id/extra_view_line"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="34dp"
+                android:background="@color/colorPrimaryDark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                android:id="@+id/extra_audio_call"
+                app:cornerRadius="8dp"
+                app:rippleColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:padding="8dp"
+                android:backgroundTint="@color/white"
+                app:strokeColor="@color/colorPrimary"
+                app:strokeWidth="1dp"
+                app:icon="@drawable/ic_audio_call"
+                app:iconSize="36dp"
+                app:iconGravity="end"
+                app:iconTint="@color/colorPrimaryDark"
+                android:text="@string/audio"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toStartOf="@+id/extra_video_call"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/extra_view_line" />
+
+            <Button
+                android:id="@+id/extra_video_call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:padding="8dp"
+                android:text="@string/video"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:cornerRadius="8dp"
+                app:icon="@drawable/ic_video_call"
+                app:iconGravity="end"
+                app:iconSize="36dp"
+                app:iconTint="@color/colorPrimaryDark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/extra_audio_call"
+                app:layout_constraintTop_toTopOf="@+id/extra_audio_call"
+                app:rippleColor="@color/colorPrimary"
+                app:strokeColor="@color/colorPrimary"
+                app:strokeWidth="1dp" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

@@ -1,13 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.activities.homeDesitnations.navUi.expenses.ExpensesFragment">
+    tools:context=".home.ui.navUi.ExpensesFragment">
+
+    <ImageView
+        android:id="@+id/surface_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_surface"
+        app:layout_constraintBottom_toTopOf="@+id/value_pay_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello" />
+        android:id="@+id/value_pay_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/segoe_ui_bold"
+        android:text="@string/subscribe"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_cannot_pay"
+        app:layout_constraintEnd_toEndOf="@+id/surface_img"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/surface_img"
+        app:layout_constraintTop_toBottomOf="@+id/surface_img" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/tv_cannot_pay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/segoe_ui_bold"
+        android:text="@string/exception_pay"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/card_can_subscribe"
+        app:layout_constraintEnd_toEndOf="@+id/value_pay_tv"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/value_pay_tv"
+        app:layout_constraintTop_toBottomOf="@+id/value_pay_tv" />
+
+
+    <TextView
+        android:id="@+id/card_can_subscribe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/radius_rectangle_primary_light"
+        android:fontFamily="@font/segoe_ui_bold"
+        android:padding="8dp"
+        android:text="@string/if_can_subsribe"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_vf_cash"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cannot_pay" />
+
+
+    <TextView
+        android:id="@+id/tv_vf_cash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/segoe_ui_bold"
+        android:text="@string/vf_cash"
+        android:textColor="@color/colorPrimaryLight"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/cash_number_tv"
+        app:layout_constraintEnd_toEndOf="@+id/cash_number_tv"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/cash_number_tv"
+        app:layout_constraintTop_toBottomOf="@+id/card_can_subscribe" />
+
+
+    <TextView
+        android:id="@+id/cash_number_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/radius_rectangle_primary_light"
+        android:fontFamily="@font/segoe_ui_bold"
+        android:gravity="center"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:text="@string/_01123845380"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/center_number_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_vf_cash" />
+
+
+    <TextView
+        android:id="@+id/center_number_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/segoe_ui_bold"
+        android:text="@string/center_number"
+        android:textColor="@color/colorPrimaryLight"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/center_number_desc_tv"
+        app:layout_constraintEnd_toEndOf="@+id/center_number_desc_tv"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/center_number_desc_tv"
+        app:layout_constraintTop_toBottomOf="@+id/cash_number_tv" />
+
+
+    <TextView
+        android:id="@+id/center_number_desc_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/radius_rectangle_primary_light"
+        android:fontFamily="@font/segoe_ui_bold"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:text="@string/_11111111"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/please_send_massage_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/center_number_tv" />
+
+
+    <TextView
+        android:id="@+id/please_send_massage_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/carved_shape"
+        android:fontFamily="@font/segoe_ui_bold"
+        android:padding="28dp"
+        android:text="@string/pease_send_massage_to_adminstrator"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

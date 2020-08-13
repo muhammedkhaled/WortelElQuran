@@ -2,16 +2,17 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="10dp">
-
+    android:layout_margin="14dp">
 
     <TextView
         android:id="@+id/notification_list_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/white_half_round_blue"
+        android:background="@drawable/radius_rectangle_primary_light"
         android:fontFamily="@font/segoe_ui_bold"
         android:textColor="@color/black"
-        android:textSize="20sp" />
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:padding="14dp" />
 
 </androidx.cardview.widget.CardView>

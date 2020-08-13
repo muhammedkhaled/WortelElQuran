@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.activities.homeDesitnations.navUi.profile.ProfileFragment">
+    tools:context=".home.ui.navUi.ProfileFragment">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -181,7 +181,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
-            android:background="@drawable/radius_rectangle_prinmary_light"
+            android:background="@drawable/radius_rectangle_primary_light"
             android:orientation="vertical"
             android:padding="8dp"
             app:layout_constraintEnd_toStartOf="@+id/profile_guide_line_v1"
@@ -222,7 +222,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:background="@drawable/radius_rectangle_prinmary_light"
+            android:background="@drawable/radius_rectangle_primary_light"
             android:orientation="vertical"
             android:padding="8dp"
             app:layout_constraintEnd_toStartOf="@+id/profile_guide_line_v1"
@@ -273,7 +273,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
-            android:background="@drawable/radius_rectangle_prinmary_light"
+            android:background="@drawable/radius_rectangle_primary_light"
             android:orientation="vertical"
             android:padding="8dp"
             app:layout_constraintEnd_toStartOf="@+id/profile_guide_line_v1"
@@ -324,7 +324,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
-            android:background="@drawable/radius_rectangle_prinmary_light"
+            android:background="@drawable/radius_rectangle_primary_light"
             android:orientation="vertical"
             android:padding="8dp"
             app:layout_constraintEnd_toStartOf="@+id/profile_guide_line_v1"
@@ -337,7 +337,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
-                android:text="الباسورد"
+                android:text="@string/password"
                 android:textColor="#706B6B"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -376,7 +376,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
-            android:background="@drawable/radius_rectangle_prinmary_light"
+            android:background="@drawable/radius_rectangle_primary_light"
             android:orientation="vertical"
             android:padding="8dp"
             app:layout_constraintEnd_toStartOf="@+id/profile_guide_line_v1"
@@ -418,7 +418,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
-            android:background="@drawable/radius_rectangle_prinmary_light"
+            android:background="@drawable/radius_rectangle_primary_light"
             android:orientation="vertical"
             android:padding="8dp"
             app:layout_constraintEnd_toStartOf="@+id/profile_guide_line_v1"
@@ -426,7 +426,7 @@
             app:layout_constraintTop_toBottomOf="@+id/profile_country_ll">
 
             <TextView
-                android:id="@+id/des_mychiekh_name"
+                android:id="@+id/des_mychiekh_name_desc_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -450,7 +450,7 @@
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/des_mychiekh_name" />
+                app:layout_constraintTop_toBottomOf="@id/des_mychiekh_name_desc_tv" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -460,7 +460,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
-            android:background="@drawable/radius_rectangle_prinmary_light"
+            android:background="@drawable/radius_rectangle_primary_light"
             android:orientation="vertical"
             android:padding="8dp"
             app:layout_constraintEnd_toStartOf="@+id/profile_guide_line_v1"

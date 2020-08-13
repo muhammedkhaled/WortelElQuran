@@ -8,7 +8,7 @@
     <include app:graph="@navigation/home_nav_graph" />
     <fragment
         android:id="@+id/forgotPasswordFragment"
-        android:name="com.example.ertaqiwratel.presentation.activities.loginDestinations.ForgotPasswordFragment"
+        android:name="com.example.ertaqiwratel.registration.ui.ForgotPasswordFragment"
         android:label="@string/RememberPassword"
         tools:layout="@layout/fragment_forgot_password" >
         <action
@@ -21,7 +21,7 @@
     </fragment>
     <fragment
         android:id="@+id/verificationCodeFragment"
-        android:name="com.example.ertaqiwratel.presentation.activities.loginDestinations.VerificationCodeFragment"
+        android:name="com.example.ertaqiwratel.registration.ui.VerificationCodeFragment"
         android:label="@string/phoneConfirmation"
         tools:layout="@layout/fragment_verification_code" >
         <action
@@ -31,10 +31,14 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right"/>
+        <argument
+            android:name="reason"
+            app:argType="string"
+            android:defaultValue="NEW_REGISTRATION" />
     </fragment>
     <fragment
         android:id="@+id/regisPhoneFragment"
-        android:name="com.example.ertaqiwratel.presentation.activities.loginDestinations.RegisPhoneFragment"
+        android:name="com.example.ertaqiwratel.registration.ui.RegisPhoneFragment"
         android:label="@string/createAccount"
         tools:layout="@layout/fragment_regis_phone" >
         <action
@@ -49,7 +53,7 @@
     </fragment>
     <fragment
         android:id="@+id/regisInfoFragment"
-        android:name="com.example.ertaqiwratel.presentation.activities.loginDestinations.RegisInfoFragment"
+        android:name="com.example.ertaqiwratel.registration.ui.RegisInfoFragment"
         android:label=""
         tools:layout="@layout/fragment_regis_info" >
         <action
@@ -69,23 +73,23 @@
     </fragment>
     <activity
         android:id="@+id/loginActivity"
-        android:name="com.example.ertaqiwratel.presentation.activities.loginDestinations.LoginActivity"
+        android:name="com.example.ertaqiwratel.registration.ui.LoginActivity"
         android:label="activity_login"
         tools:layout="@layout/activity_login" />
     <activity
         android:id="@+id/landingActivity"
-        android:name="com.example.ertaqiwratel.presentation.activities.landingDestinations.LandingActivity"
+        android:name="com.example.ertaqiwratel.landing.ui.LandingActivity"
         android:label="activity_landing"
         tools:layout="@layout/activity_landing" />
     <activity
         android:id="@+id/mainActivity"
-        android:name="com.example.ertaqiwratel.presentation.activities.homeDesitnations.MainActivity"
+        android:name="com.example.ertaqiwratel.home.ui.MainActivity"
         android:label="app_bar_main"
         tools:layout="@layout/app_bar_main" />
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.ertaqiwratel.presentation.activities.loginDestinations.LoginFragment"
-        android:label=""
+        android:name="com.example.ertaqiwratel.registration.ui.LoginFragment"
+        android:label="تسجيل الدخول"
         tools:layout="@layout/fragment_login" >
         <action
             android:id="@+id/action_loginFragment_to_regisPhoneFragment"
@@ -104,13 +108,31 @@
     </fragment>
     <fragment
         android:id="@+id/completeInfoFragment"
-        android:name="com.example.ertaqiwratel.presentation.activities.loginDestinations.CompleteInfoFragment"
+        android:name="com.example.ertaqiwratel.registration.ui.CompleteInfoFragmentSt"
         android:label=""
-        tools:layout="@layout/fragment_complete_info" />
+        tools:layout="@layout/fragment_complete_info_st" />
     <fragment
         android:id="@+id/completeInfoShFragment"
-        android:name="com.example.ertaqiwratel.presentation.activities.loginDestinations.CompleteInfoShFragment"
+        android:name="com.example.ertaqiwratel.registration.ui.CompleteInfoShFragment"
         android:label=""
-        tools:layout="@layout/fragment_complete_info_sh" />
+        tools:layout="@layout/fragment_complete_info_sh" >
+        <action
+            android:id="@+id/action_completeInfoShFragment_to_readingsFragment"
+            app:destination="@id/readingsFragment" />
+        <action
+            android:id="@+id/action_completeInfoShFragment_to_suitableDaysShFragment"
+            app:destination="@id/suitableDaysShFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/readingsFragment"
+        android:name="com.example.ertaqiwratel.registration.ui.ReadingsFragment"
+        android:label="القراءات"
+        tools:layout="@layout/fragment_readings" />
+    <fragment
+        android:id="@+id/suitableDaysShFragment"
+        android:name="com.example.ertaqiwratel.registration.ui.suitableDaysShFragment"
+        android:label="الايام والاوقات المناسبه"
+        tools:layout="@layout/fragment_suitable_days_sh" />
 
 </navigation>

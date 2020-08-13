@@ -4,19 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.activities.homeDesitnations.navUi.settings.SettingsFragment">
+    tools:context=".home.ui.navUi.SettingsFragment">
 
     <TextView
         android:id="@+id/tv_sting_welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/andalus"
         android:text="@string/welcome_to"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_student_name"
         app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -24,123 +25,139 @@
         android:id="@+id/tv_student_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:layout_marginStart="8dp"
         android:fontFamily="@font/andalus"
         android:text="@string/alaa_name"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="24sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/tv_sting_welcome"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/tv_sting_welcome" />
 
     <Button
-        android:id="@+id/tv_profile"
+        android:id="@+id/sett_about_wratel_btn"
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton.Icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="80dp"
-        android:drawableStart="@drawable/ic_person"
-        android:fontFamily="@font/segoe_ui_bold"
-        android:text="@string/profile"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <Button
-        android:id="@+id/tv_about_wratel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:drawableStart="@drawable/ic_help"
-        android:fontFamily="@font/segoe_ui_bold"
+        android:elevation="0dp"
         android:text="@string/about_wratel"
         android:textColor="@color/black"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="@+id/tv_profile"
-        app:layout_constraintTop_toBottomOf="@id/tv_profile" />
+        android:textSize="18sp"
+        app:backgroundTint="@color/white"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="14dp"
+        app:icon="@drawable/ic_help"
+        app:iconGravity="start"
+        app:iconTint="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_sting_welcome"
+        app:rippleColor="@color/colorPrimaryLight" />
 
 
     <Button
-        android:id="@+id/tv_privacy_policy"
+        android:id="@+id/sett_privacy_policy_btn"
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton.Icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:drawableStart="@drawable/ic_description"
-        android:fontFamily="@font/segoe_ui_bold"
+        android:layout_marginTop="4dp"
+        android:elevation="0dp"
         android:text="@string/privacy_policy"
         android:textColor="@color/black"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="@+id/tv_about_wratel"
-        app:layout_constraintTop_toBottomOf="@id/tv_about_wratel" />
+        android:textSize="18sp"
+        app:backgroundTint="@color/white"
+        app:rippleColor="@color/colorPrimaryLight"
 
+        app:icon="@drawable/ic_description"
+        app:iconGravity="start"
+        app:iconTint="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/sett_about_wratel_btn"
+        app:layout_constraintTop_toBottomOf="@id/sett_about_wratel_btn" />
 
-    <TextView
-        android:id="@+id/tv_alarm"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/settings_studentReminder_consL"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:fontFamily="@font/segoe_ui_bold"
-        android:text="@string/alarm"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="@+id/tv_privacy_policy"
-        app:layout_constraintTop_toBottomOf="@+id/tv_privacy_policy" />
+        app:layout_constraintStart_toStartOf="@+id/sett_privacy_policy_btn"
+        app:layout_constraintTop_toBottomOf="@+id/sett_privacy_policy_btn"
+        >
 
-    <TextView
-        android:id="@+id/tv_alarm_before"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:fontFamily="@font/segoe_ui_bold"
-        android:text="@string/alarm_before_meeting"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        app:layout_constraintStart_toEndOf="@id/tv_alarm"
-        app:layout_constraintTop_toTopOf="@+id/tv_alarm" />
-
-    <RadioGroup
-        android:id="@+id/radio_time"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
-        app:layout_constraintStart_toStartOf="@+id/tv_alarm_before"
-        app:layout_constraintTop_toBottomOf="@id/tv_alarm_before">
-
-        <RadioButton
+        <TextView
+            android:id="@+id/desc_alarm_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/clock"
-            android:textSize="20sp" />
-
-        <RadioButton
+            android:fontFamily="@font/segoe_ui_bold"
+            android:text="@string/alarm"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/tv_alarm_before"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/half_an_hour"
-            android:textSize="20sp" />
+            android:layout_marginStart="16dp"
+            android:text="@string/alarm_before_meeting"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/desc_alarm_tv"
+            app:layout_constraintStart_toEndOf="@id/desc_alarm_tv"
+            app:layout_constraintTop_toTopOf="@+id/desc_alarm_tv" />
 
-        <RadioButton
+        <RadioGroup
+            android:id="@+id/radio_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/add"
-            android:textSize="20sp" />
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@+id/tv_alarm_before"
+            app:layout_constraintTop_toBottomOf="@id/tv_alarm_before">
 
-    </RadioGroup>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/clock"
+                android:buttonTint="@color/colorPrimary"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/half_an_hour"
+                android:buttonTint="@color/colorPrimary"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add"
+                android:buttonTint="@color/colorPrimary"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+        </RadioGroup>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     <Button
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton.Icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="21dp"
-        android:drawableStart="@drawable/ic_logout"
-        android:fontFamily="@font/segoe_ui_bold"
+        android:layout_marginTop="8dp"
+        android:elevation="0dp"
         android:text="@string/logout"
         android:textColor="@color/red"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/radio_time" />
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/white"
+        app:icon="@drawable/ic_logout"
+        app:iconGravity="end"
+        app:iconTint="@color/red"
+        app:layout_constraintEnd_toEndOf="@+id/sett_privacy_policy_btn"
+        app:layout_constraintStart_toStartOf="@+id/sett_privacy_policy_btn"
+        app:layout_constraintTop_toBottomOf="@id/settings_studentReminder_consL"
+        app:rippleColor="@color/colorPrimaryLight" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,8 +6,12 @@
     android:layout_marginStart="18dp"
     android:layout_marginTop="8dp"
     android:layout_marginEnd="18dp"
-    android:background="@drawable/radius_rectangle_prinmary_light"
-    android:padding="8dp">
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/radius_rectangle_primary_light"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp"
+    android:paddingBottom="14dp"
+    android:paddingTop="8dp">
 
 
 
@@ -24,7 +28,7 @@
 
     <LinearLayout
         android:id="@+id/top_title"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layoutDirection="rtl"
@@ -80,7 +84,7 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:src="@drawable/edit"
-        android:visibility="visible"
+        android:visibility="gone"
         android:background="?selectableItemBackground"
         app:layout_constraintBottom_toBottomOf="@id/top_title"
         app:layout_constraintEnd_toEndOf="parent"

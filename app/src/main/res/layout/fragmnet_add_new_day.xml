@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center_horizontal"
-    tools:context=".presentation.activities.homeDesitnations.AddNewTableForStudentFragment">
+    tools:context=".home.ui.AddNewTableForStudentFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraint"
@@ -16,7 +16,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="28dp"
-        android:background="@drawable/radius_rectangle_prinmary_light"
+        android:background="@drawable/radius_rectangle_primary_light"
         android:paddingBottom="20dp"
         android:paddingStart="4dp"
         android:paddingEnd="4dp">

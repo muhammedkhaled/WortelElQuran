@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.activities.homeDesitnations.navUi.extra.ExtraSessionStFragment">
+    tools:context=".home.ui.navUi.ExtraSessionStFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/extra_rv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/extra_item_st" />
+        tools:listitem="@layout/item_extra_st" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

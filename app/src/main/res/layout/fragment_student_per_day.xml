@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".presentation.activities.homeDesitnations.StudentPerDayFragment">
+    tools:context=".home.ui.StudentPerDayFragment">
 
     <TextView
         android:id="@+id/desc_student_of_day_tv"

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="18dp"
+    tools:context=".home.ui.ProfileBottomSheetDialog">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/profile_BS_first_til"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
+        android:hint="@string/password"
+        android:textColorHint="@color/dark_gray"
+        app:boxCornerRadiusBottomEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusTopStart="8dp"
+        app:boxStrokeColor="@color/colorPrimary"
+        app:boxStrokeWidth="1dp"
+        app:hintTextColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:passwordToggleEnabled="true">
+
+        <EditText
+            android:id="@+id/profile_BS_first_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:maxLength="70"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/profile_BS_second_til"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textColorHint="@color/dark_gray"
+        app:boxCornerRadiusBottomEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusTopStart="8dp"
+        app:boxStrokeColor="@color/colorPrimary"
+        app:boxStrokeWidth="1dp"
+        app:hintTextColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/profile_BS_first_til"
+        app:layout_constraintStart_toStartOf="@+id/profile_BS_first_til"
+        app:layout_constraintTop_toBottomOf="@id/change_phone_ll">
+
+        <EditText
+            android:id="@+id/profile_BS_second_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="70"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/change_phone_ll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_rounded_blue"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="@+id/profile_BS_first_til"
+        app:layout_constraintStart_toStartOf="@+id/profile_BS_first_til"
+        app:layout_constraintTop_toBottomOf="@+id/profile_BS_first_til"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/change_phone_et"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:inputType="phone|number"
+            android:maxLength="12"
+            android:maxLines="1"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textColorHint="@android:color/darker_gray"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary" />
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/change_cpp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            app:ccpDialog_keyboardAutoPopup="true"
+            app:ccpDialog_textColor="@color/black"
+            app:ccp_arrowSize="18sp"
+            app:ccp_autoDetectCountry="true"
+            app:ccp_countryPreference="EG,SA,TN,AE,LY,OM,MY,KW,PK,DZ,BH,MA,QA,SY,YE,TR"
+            app:ccp_defaultNameCode="EG"
+            app:ccp_hintExampleNumber="true"
+            app:ccp_internationalFormattingOnly="true"
+            app:ccp_showNameCode="true"
+            app:ccp_textSize="12sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/profile_BS_btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/save"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/profile_BS_first_til"
+        app:layout_constraintTop_toBottomOf="@+id/profile_BS_second_til" />
+
+    <Button
+        android:id="@+id/profile_BS_btn_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/cancel"
+        android:textSize="18sp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@+id/profile_BS_btn_save"
+        app:layout_constraintTop_toBottomOf="@+id/profile_BS_second_til" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

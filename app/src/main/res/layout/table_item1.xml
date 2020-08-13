@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="15dp"
-    android:background="@drawable/radius_rectangle_prinmary_light"
+    android:background="@drawable/radius_rectangle_primary_light"
     android:padding="15dp">
 
     <LinearLayout

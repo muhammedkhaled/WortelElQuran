@@ -12,8 +12,8 @@
     <string name="intro_text_2">اعطاء اجازه متصله بالسند</string>
     <string name="intro_text_3">"هل من مشمر الى الجنه "</string>
     <string name="write_message">اكتب رساله</string>
-    <string name="chiehk_phone">الجوال</string>
-    <string name="chiehk_status">الحاله</string>
+    <string name="phone">الجوال</string>
+    <string name="status">الحاله</string>
     <string name="quran_ijazah">الاجازات المتصله بالسند</string>
     <string name="home_screen">الصفحه الرئيسيه</string>
     <string name="profile">الصفحه الشخصيه</string>
@@ -206,8 +206,6 @@
         <item>اعتذار</item>
         <item>غياب</item>
     </string-array>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="ahmed_sameh">الشيخ / احمد سامح</string>
     <string name="_00_00">00:00</string>
 
@@ -219,7 +217,7 @@
     <string name="thSutiableDay">اليوم المناسب</string>
     <string name="thSutiableTime">التوقيت المناسب</string>
     <string name="halfHourForWeeklySession">نصف ساعه للتسميع الاسبوعى</string>
-    <string name="shiekhName">اسم الشيخ</string>
+    <string name="shiekhName">الشيخ</string>
     <string name="register">تسجيل</string>
     <string name="quranReadings">القراءات</string>
     <string name="suitableDays">الايام المناسبه</string>
@@ -258,6 +256,7 @@
     <string name="accept">قبول</string>
     <string name="reject">رفض</string>
     <string name="suggestions_and_improvements">الاقتراحات والتحسينات</string>
-    <string name="expenses">تسجيل الخروج</string>
+    <string name="expenses">المصروفات</string>
+    <string name="cancel">الغاء</string>
 
 </resources>

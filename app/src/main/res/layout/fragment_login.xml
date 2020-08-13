@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".presentation.activities.loginDestinations.LoginFragment">
+    tools:context=".registration.ui.LoginFragment">
 
     <ImageView
         android:id="@+id/app_logo_imgView"
@@ -164,18 +164,9 @@
         android:textColor="@color/colorPrimary"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="@+id/regs_utype_rg"
+        app:layout_constraintStart_toStartOf="@+id/regs_utype_rg"
         app:layout_constraintTop_toBottomOf="@+id/regs_utype_rg" />
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:text="@string/rememberMe"
-        android:textSize="14sp"
-        android:textColor="@color/colorPrimary"
-        android:buttonTint="@color/colorPrimary"
-        app:layout_constraintBottom_toBottomOf="@+id/login_tv_forgot_password"
-        app:layout_constraintStart_toStartOf="@+id/regs_utype_rg"
-        app:layout_constraintTop_toTopOf="@+id/login_tv_forgot_password" />
 
     <Button
         style="@style/ButtonState"
