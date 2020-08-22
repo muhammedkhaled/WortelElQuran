@@ -12,7 +12,7 @@ import androidx.fragment.app.DialogFragment;
 import com.example.ertaqiwratel.databinding.DialogInfoBinding;
 import com.example.ertaqiwratel.utils.Prevalent;
 
-public class infoDialog extends DialogFragment {
+public class InfoDialog extends DialogFragment {
 
     private DialogInfoBinding binding;
 

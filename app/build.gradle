@@ -2,6 +2,10 @@ apply plugin: 'com.android.application'
 apply plugin: "androidx.navigation.safeargs"
 
 android {
+
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
 
@@ -21,13 +25,15 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    android {
 
+    android {
         buildFeatures{
             viewBinding = true
         }
     }
 }
+
+
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
@@ -53,8 +59,13 @@ dependencies {
     implementation 'com.hbb20:ccp:2.4.0'
     // otp editText
     implementation 'com.github.mukeshsolanki:android-otpview-pinview:2.1.0'
-
+    // exo_player
+    implementation 'com.google.android.exoplayer:exoplayer:2.7.3'
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.11.5'
+    implementation 'com.google.android.exoplayer:exoplayer-dash:2.11.5'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.11.5'
 }
 repositories {
     mavenCentral()
 }
+

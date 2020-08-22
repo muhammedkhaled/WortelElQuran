@@ -8,7 +8,7 @@
     android:paddingTop="8dp"
     android:paddingEnd="24dp"
     android:paddingBottom="24dp"
-    tools:context=".home.ui.infoDialog">
+    tools:context=".home.ui.InfoDialog">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/my_chiekh_info_profile_image"

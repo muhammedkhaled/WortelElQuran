@@ -116,7 +116,7 @@
 
     <dialog
         android:id="@+id/info_dialog"
-        android:name="com.example.ertaqiwratel.home.ui.infoDialog"
+        android:name="com.example.ertaqiwratel.home.ui.InfoDialog"
         tools:layout="@layout/dialog_info" />
 
     <fragment
@@ -181,7 +181,7 @@
     <fragment
         android:id="@+id/studentPerDayFragment"
         android:name="com.example.ertaqiwratel.home.ui.StudentPerDayFragment"
-        android:label="{dayName}"
+        android:label="طلاب يوم {dayName}"
         tools:layout="@layout/fragment_student_per_day">
         <argument
             android:name="dayName"

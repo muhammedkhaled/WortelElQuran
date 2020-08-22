@@ -15,6 +15,7 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
 import com.example.ertaqiwratel.R;
+import com.example.ertaqiwratel.checkPoint.CheckPointActivity;
 import com.example.ertaqiwratel.databinding.FragmentLoginBinding;
 import com.example.ertaqiwratel.home.pojo.User;
 import com.example.ertaqiwratel.home.ui.MainActivity;
@@ -41,7 +42,8 @@ public class LoginFragment extends Fragment {
                 .setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Navigation.findNavController(v).navigate(R.id.action_loginFragment_to_regisPhoneFragment);
+//                        Navigation.findNavController(v).navigate(R.id.action_loginFragment_to_regisPhoneFragment);
+                        requireActivity().startActivity(new Intent(requireContext(), CheckPointActivity.class));
                     }
                 });
 
