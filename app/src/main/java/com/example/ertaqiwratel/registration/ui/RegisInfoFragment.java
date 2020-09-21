@@ -14,6 +14,7 @@ import android.widget.DatePicker;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
 import com.example.ertaqiwratel.utils.Prevalent;
@@ -29,13 +30,12 @@ import java.util.Locale;
 public class RegisInfoFragment extends Fragment {
     private FragmentRegisInfoBinding binding;
     private final Calendar mCalendar = Calendar.getInstance();
-
-    private String mFullName, mEmail, mPass, mConPass, mGender, mCountry, mGovernorate, mBirthDate;
+    private NavController mNavController;
+    private String mMobile, mFullName, mEmail, mPass, mConPass, mGender, mCountry, mGovernorate, mBirthDate;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         binding = FragmentRegisInfoBinding.inflate(inflater, container, false);
         return binding.getRoot();
     }
@@ -43,28 +43,29 @@ public class RegisInfoFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        mNavController = Navigation.findNavController(requireActivity(),R.id.login_host_fragment);
 
         sSpinnerEntities();
         addTextWatcher();
-        inputsDataString();
+        getInputsData();
+
+        mMobile = RegisInfoFragmentArgs.fromBundle(getArguments()).getMobile();
 
         binding.registerInfoBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (validateUserData()) {
-//                    String userType = "معلم";
                     String userType = Prevalent.CURRENT_ONLINE_USER.getUserType();
                     if (userType.equals("معلم")){
-                        Navigation.findNavController(v).navigate(R.id.action_regisInfoFragment_to_completeInfoShFragment);
+                        completeShiekhInfo();
                     }else {
-                        Navigation.findNavController(v).navigate(R.id.action_regisInfoFragment_to_completeInfoFragment);
+                        completeStudentInfo();
                     }
                 }
 
             }
         });
 
-//        binding.regsBirthDateBtn.addTextChangedListener(new DateMask());
         binding.regsBirthDateBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,18 +79,34 @@ public class RegisInfoFragment extends Fragment {
         });
     }
 
+    private void completeStudentInfo() {
+        RegisInfoFragmentDirections.ActionRegisInfoFragmentToCompleteInfoFragmentSt action =
+                RegisInfoFragmentDirections.actionRegisInfoFragmentToCompleteInfoFragmentSt(
+                        mMobile, mFullName, mEmail, mPass, mConPass, mCountry, mGovernorate, mGender, mBirthDate);
+        mNavController.navigate(action);
+    }
+
+    private void completeShiekhInfo() {
+        RegisInfoFragmentDirections.ActionRegisInfoFragmentToCompleteInfoShFragment action =
+                RegisInfoFragmentDirections.actionRegisInfoFragmentToCompleteInfoShFragment(
+                       mMobile, mFullName, mEmail, mPass, mConPass, mCountry, mGovernorate, mGender, mBirthDate);
+        mNavController.navigate(action);
+    }
+
     private boolean validateUserData() {
-        inputsDataString();
+        getInputsData();
 
         if (mFullName.length() <= 6) {
             binding.regsInfoFullNameEt.setError("الرجاء ادخال الاسم بالكامل");
             binding.regsInfoFullNameEt.requestFocus();
             return false;
-        } else if (android.util.Patterns.EMAIL_ADDRESS.matcher(mEmail).matches()) {
+        }
+        else if (android.util.Patterns.EMAIL_ADDRESS.matcher(mEmail).matches()) {
             binding.regsInfoEmailEt.setError("برجاء ادخال البريد الاكترونى");
             binding.regsInfoEmailEt.requestFocus();
             return false;
-        } else if (mPass.length() <= 6) {
+        }
+        else if (mPass.length() <= 6) {
             binding.regsInfoPassEt.setError("برجاء ادخال كلمه سر اكثر من 6 حروف او ارقام", null);
             binding.regsInfoPassEt.requestFocus();
             return false;
@@ -124,22 +141,20 @@ public class RegisInfoFragment extends Fragment {
             mCalendar.set(Calendar.YEAR, year);
             mCalendar.set(Calendar.MONTH, monthOfYear);
             mCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
-
             SimpleDateFormat sDFormat = new SimpleDateFormat("dd MM, yyyy", Locale.getDefault());
             binding.regsBirthDateBtn.setText(sDFormat.format(mCalendar.getTime()));
         }
     };
 
-    private void inputsDataString() {
+    private void getInputsData() {
         mFullName = binding.regsInfoFullNameEt.getText().toString().trim();
         mEmail = binding.regsInfoFullNameEt.getText().toString().trim();
         mPass = binding.regsInfoPassEt.getText().toString().trim();
         mConPass = binding.regsInfoConPassEt.getText().toString().trim();
-        mGender = binding.regsInfoGenderAcTv.getText().toString().trim();
-        mCountry = binding.regsCountryAcTv.getEditableText().toString().trim();
-        mGovernorate = binding.regsInfoGovernorateAcTv.getEditableText().toString().trim();
-        mBirthDate = binding.regsBirthDateBtn.getText().toString().trim();
-
+        mGender = (binding.regsInfoGenderAcTv.getText().toString().equals("ذكر")) ? "m":"f";
+        mCountry = binding.regsCountryAcTv.getEditableText().toString();
+        mGovernorate = binding.regsInfoGovernorateAcTv.getEditableText().toString();
+        mBirthDate = binding.regsBirthDateBtn.getText().toString();
     }
 
     private void addTextWatcher() {

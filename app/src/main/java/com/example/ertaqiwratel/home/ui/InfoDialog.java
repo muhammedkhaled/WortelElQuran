@@ -1,5 +1,7 @@
 package com.example.ertaqiwratel.home.ui;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -28,6 +30,14 @@ public class InfoDialog extends DialogFragment {
         super.onViewCreated(view, savedInstanceState);
 
         setViews();
+        binding.dialogInfoPhoneLl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:" + binding.dialogInfoPhoneTv.getText().toString()));
+                requireActivity().startActivity(intent);
+            }
+        });
     }
 
     private void setViews() {

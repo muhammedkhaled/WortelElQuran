@@ -42,8 +42,7 @@ public class LoginFragment extends Fragment {
                 .setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-//                        Navigation.findNavController(v).navigate(R.id.action_loginFragment_to_regisPhoneFragment);
-                        requireActivity().startActivity(new Intent(requireContext(), CheckPointActivity.class));
+                        Navigation.findNavController(v).navigate(R.id.action_loginFragment_to_regisPhoneFragment);
                     }
                 });
 

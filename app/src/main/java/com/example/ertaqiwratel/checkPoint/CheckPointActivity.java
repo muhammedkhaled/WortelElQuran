@@ -2,11 +2,15 @@ package com.example.ertaqiwratel.checkPoint;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 
 import com.example.ertaqiwratel.R;
 import com.example.ertaqiwratel.databinding.ActivityCheckPointBinding;
+import com.example.ertaqiwratel.home.ui.MainActivity;
 import com.google.android.exoplayer2.SimpleExoPlayer;
 import com.google.android.exoplayer2.source.ConcatenatingMediaSource;
 import com.google.android.exoplayer2.source.MediaSource;
@@ -30,6 +34,13 @@ public class CheckPointActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_check_point);
         playerView = findViewById(R.id.video_view);
+        findViewById(R.id.skip_check_point_tv).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(CheckPointActivity.this, MainActivity.class));
+                finish();
+            }
+        });
     }
 
     @Override

@@ -6,6 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".checkPoint.CheckPointActivity">
 
+    <!--todo this textView for testing only remove in production-->
+    <TextView
+        android:id="@+id/skip_check_point_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:padding="4dp"
+        android:text="skip"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/message_contL"
         android:layout_width="match_parent"
@@ -64,12 +77,14 @@
         app:layout_constraintBottom_toTopOf="@+id/message_contL"
         app:layout_constraintEnd_toEndOf="@+id/message_contL"
         app:layout_constraintStart_toStartOf="@+id/message_contL"
-        app:layout_constraintTop_toTopOf="@+id/message_contL" />
+        app:layout_constraintTop_toTopOf="@+id/message_contL"
+        />
 
     <Button
         android:id="@+id/check_approval_state"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/cairo"
         android:text="تحقق من الطلب"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/message_contL"

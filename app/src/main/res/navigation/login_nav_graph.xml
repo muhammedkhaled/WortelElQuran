@@ -35,6 +35,9 @@
             android:name="reason"
             app:argType="string"
             android:defaultValue="NEW_REGISTRATION" />
+        <argument
+            android:name="mobile"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/regisPhoneFragment"
@@ -57,8 +60,8 @@
         android:label=""
         tools:layout="@layout/fragment_regis_info" >
         <action
-            android:id="@+id/action_regisInfoFragment_to_completeInfoFragment"
-            app:destination="@id/completeInfoFragment"
+            android:id="@+id/action_regisInfoFragment_to_completeInfoFragmentSt"
+            app:destination="@id/completeInfoFragmentSt"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
@@ -70,6 +73,9 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right"/>
+        <argument
+            android:name="mobile"
+            app:argType="string" />
     </fragment>
     <activity
         android:id="@+id/loginActivity"
@@ -107,13 +113,43 @@
             app:popExitAnim="@anim/slide_down"/>
     </fragment>
     <fragment
-        android:id="@+id/completeInfoFragment"
+        android:id="@+id/completeInfoFragmentSt"
         android:name="com.example.ertaqiwratel.registration.ui.CompleteInfoFragmentSt"
         android:label=""
-        tools:layout="@layout/fragment_complete_info_st" />
+        tools:layout="@layout/fragment_complete_info_st" >
+        <argument
+            android:name="mobile"
+            app:argType="string" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="email"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="pass"
+            app:argType="string" />
+        <argument
+            android:name="c_pass"
+            app:argType="string" />
+        <argument
+            android:name="country"
+            app:argType="string" />
+        <argument
+            android:name="governorate"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="gender"
+            app:argType="string" />
+        <argument
+            android:name="date_of_birth"
+            app:argType="string" />
+    </fragment>
     <fragment
         android:id="@+id/completeInfoShFragment"
-        android:name="com.example.ertaqiwratel.registration.ui.CompleteInfoShFragment"
+        android:name="com.example.ertaqiwratel.registration.ui.CompleteInfoFragmentSh"
         android:label=""
         tools:layout="@layout/fragment_complete_info_sh" >
         <action
@@ -122,6 +158,36 @@
         <action
             android:id="@+id/action_completeInfoShFragment_to_suitableDaysShFragment"
             app:destination="@id/suitableDaysShFragment" />
+        <argument
+            android:name="mobile"
+            app:argType="string" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="email"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="pass"
+            app:argType="string" />
+        <argument
+            android:name="c_pass"
+            app:argType="string" />
+        <argument
+            android:name="country"
+            app:argType="string" />
+        <argument
+            android:name="governorate"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="gender"
+            app:argType="string" />
+        <argument
+            android:name="date_of_birth"
+            app:argType="string" />
+
     </fragment>
 
     <fragment

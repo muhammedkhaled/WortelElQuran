@@ -226,7 +226,7 @@
     <string name="RememberPassword">تذكر كلمه المرور</string>
     <string name="createAccount">انشاء حساب</string>
     <string name="phoneConfirmation">تاكيد رقم الجوال</string>
-    <string name="pleaseWriteYourPhone">من فضلك ادخل رقم الجوال</string>
+    <string name="pleaseWriteYourPhone">رقم الجوال</string>
     <string name="password">كلمه المرور</string>
     <string name="forgotYourPassword">نسيت كلمه المرور؟</string>
     <string name="rememberMe">تذكرنى ؟</string>

@@ -7,7 +7,7 @@
     tools:context=".registration.ui.VerificationCodeFragment">
 
 
-    <ImageView
+<!--    <ImageView
         android:id="@+id/app_logo_imgView"
         android:layout_width="120dp"
         android:layout_height="120dp"
@@ -16,20 +16,19 @@
         app:layout_constraintBottom_toTopOf="@+id/app_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline" />
+        app:layout_constraintTop_toTopOf="@+id/guideline" />-->
 
     <TextView
         android:id="@+id/app_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:fontFamily="@font/andalus"
         android:text="@string/app_name"
         android:textColor="@android:color/black"
         android:textSize="28sp"
-        app:layout_constraintEnd_toEndOf="@+id/app_logo_imgView"
-        app:layout_constraintStart_toStartOf="@+id/app_logo_imgView"
-        app:layout_constraintTop_toBottomOf="@+id/app_logo_imgView" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
 
     <TextView
         android:id="@+id/tv_dec_phone_number"
@@ -55,7 +54,7 @@
         android:itemBackground="@color/colorPrimaryLight"
         android:textColor="@android:color/black"
         app:hideLineWhenFilled="true"
-        app:itemCount="6"
+        app:itemCount="4"
         app:itemSpacing="4dp"
         app:layout_constraintEnd_toEndOf="@+id/tv_dec_phone_number"
         app:layout_constraintStart_toStartOf="@+id/tv_dec_phone_number"
@@ -85,10 +84,10 @@
         app:layout_constraintTop_toBottomOf="@+id/otp_view_code" />
 
     <TextView
-        android:id="@+id/tv_login_register_now"
+        android:id="@+id/verify_resend_code_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="8dp"
         android:background="?selectableItemBackground"
         android:clickable="true"
         android:focusable="true"

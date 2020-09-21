@@ -12,18 +12,22 @@ import android.widget.RadioGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
-import com.example.ertaqiwratel.utils.Prevalent;
 import com.example.ertaqiwratel.R;
 import com.example.ertaqiwratel.databinding.FragmentRegisPhoneBinding;
 import com.example.ertaqiwratel.home.pojo.User;
+import com.example.ertaqiwratel.utils.Prevalent;
 import com.google.android.material.snackbar.Snackbar;
 
 
 public class RegisPhoneFragment extends Fragment {
+    private static final String TAG = "RegisPhoneFragment";
     private FragmentRegisPhoneBinding binding;
     private String userType;
+    private NavController mNavController;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -35,6 +39,7 @@ public class RegisPhoneFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        mNavController = Navigation.findNavController(requireActivity(),R.id.login_host_fragment);
         binding.regCpp.registerCarrierNumberEditText(binding.regsEtPhone);
         binding.tvRegLogin
                 .setOnClickListener(Navigation.createNavigateOnClickListener(R.id.loginFragment));
@@ -56,14 +61,12 @@ public class RegisPhoneFragment extends Fragment {
 
             @Override
             public void afterTextChanged(Editable s) {
-
                 if (!binding.regCpp.isValidFullNumber() && binding.regsEtPhone.getText().toString().trim().length() >= 12) {
                     binding.regBtnLogin.setEnabled(false);
                     binding.regsEtPhone.setError("الرقم غير صحيح");
                 }
             }
         });
-
 
         binding.regsUtypeRg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -75,18 +78,19 @@ public class RegisPhoneFragment extends Fragment {
 
         binding.regBtnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                if (validateData()){
+            public void onClick(final View v) {
+                if (validateData()) {
                     Prevalent.CURRENT_ONLINE_USER = new User();
-                    Prevalent.CURRENT_ONLINE_USER.setPhone(binding.regCpp.getFullNumber());
+                    Prevalent.CURRENT_ONLINE_USER.setPhone(binding.regCpp.getFullNumberWithPlus());
                     Prevalent.CURRENT_ONLINE_USER.setUserType(userType);
-                    // todo send number with action args to verificationCodeFragment
-                    Navigation.findNavController(v).navigate(R.id.action_regisPhoneFragment_to_verificationCodeFragment);
+                    RegisPhoneFragmentDirections.ActionRegisPhoneFragmentToVerificationCodeFragment action =
+                            RegisPhoneFragmentDirections
+                                    .actionRegisPhoneFragmentToVerificationCodeFragment(binding.regCpp.getFullNumberWithPlus());
+                    mNavController.navigate(action);
+                    binding.regBtnLogin.setEnabled(false);
                 }
             }
         });
-
-
     }
 
     private boolean validateData() {
@@ -94,7 +98,7 @@ public class RegisPhoneFragment extends Fragment {
             Snackbar.make(requireView(), "الرجاء تحديد نوعيه المستخدم", Snackbar.LENGTH_LONG).show();
             binding.regsUtypeRg.requestFocus();
             return false;
-        }else {
+        } else {
             return true;
         }
     }
